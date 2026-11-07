@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embassy Knowledge Park | Premier Enterprise Tech Ecosystem</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B192C',
+                            900: '#070F1B',
+                            950: '#04080F',
+                        },
+                        emerald: {
+                            400: '#34D399',
+                            500: '#10B981',
+                            600: '#059669',
+                            700: '#047857',
+                        },
+                        accent: '#00E699'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(7, 15, 27, 0.95) 0%, rgba(11, 25, 44, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070F1B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10B981;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-navy-950/80 border-b border-slate-800/60" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid font-bold text-xl fa-building-columns"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-white block leading-none">EMBASSY</span>
+                        <span class="text-xs font-semibold tracking-widest text-emerald-400 uppercase">Knowledge Park</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">About</a>
+                    <a href="#highlights" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Highlights</a>
+                    <a href="#amenities" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Amenities</a>
+                    <a href="#spaces" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Leasing Spaces</a>
+                    <a href="#tenants" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Tenants</a>
+                    <a href="#location" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Location</a>
+                </nav>
+
+                <!-- Action Button & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-4">
+                    <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-navy-950 bg-emerald-400 hover:bg-emerald-300 shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all duration-200 transform hover:-translate-y-0.5">
+                        Schedule Tour
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button type="button" id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3" id="mobile-menu">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-emerald-400 hover:bg-slate-800/50">About</a>
+            <a href="#highlights" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-emerald-400 hover:bg-slate-800/50">Highlights</a>
+            <a href="#amenities" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-emerald-400 hover:bg-slate-800/50">Amenities</a>
+            <a href="#spaces" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-emerald-400 hover:bg-slate-800/50">Leasing Spaces</a>
+            <a href="#tenants" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-emerald-400 hover:bg-slate-800/50">Tenants</a>
+            <a href="#location" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:text-emerald-400 hover:bg-slate-800/50">Location</a>
+            <a href="#contact" class="block w-full text-center mt-4 px-4 py-2.5 rounded-xl font-semibold text-navy-950 bg-emerald-400 hover:bg-emerald-300">Schedule Tour</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-16 hero-gradient overflow-hidden">
+        <!-- Abstract Glow Elements -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wider uppercase mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    World-Class Enterprise Destination
+                </div>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-none mb-6">
+                    Where Innovation Finds Its <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Sanctuary</span>.
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8">
+                    An ultra-modern 120-acre sustainable tech ecosystem engineered for Fortune 500 innovators, high-growth tech hubs, and global enterprise leaders.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#spaces" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-navy-950 bg-emerald-400 hover:bg-emerald-300 shadow-lg shadow-emerald-500/25 transition-all duration-200">
+                        Explore Available Spaces
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
+                    <a href="#amenities" class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white glass-card hover:bg-white/10 border border-slate-700 transition-all duration-200">
+                        View Campus Amenities
+                    </a>
+                </div>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-500">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1 counter" data-target="12.5">12.5M+</div>
+                    <div class="text-xs sm:text-sm text-slate-400 font-medium">Sq. Ft. Leasable Area</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-500">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">IGBC Platinum</div>
+                    <div class="text-xs sm:text-sm text-slate-400 font-medium">Green Certification</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-500">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1 counter" data-target="85">85+</div>
+                    <div class="text-xs sm:text-sm text-slate-400 font-medium">Global Fortune Occupiers</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-500">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-400 font-medium">Renewable Energy Powered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-navy-900/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1000&auto=format&fit=crop" alt="Embassy Knowledge Park Modern Facade" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <!-- Decorative Backdrop Box -->
+                    <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-emerald-500/30 rounded-3xl -z-0 hidden sm:block"></div>
+                    <div class="absolute -top-6 -left-6 w-48 h-48 bg-emerald-500/20 rounded-full blur-2xl -z-0"></div>
+                </div>
+
+                <div>
+                    <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Pioneering Workspace Design</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">Designed for Seamless Collaboration and High-Performance Teams</h2>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        Embassy Knowledge Park represents the pinnacle of modern integrated business parks. Crafted with intelligent biophilic architecture, energy-efficient infrastructure, and high-speed digital connectivity, it provides enterprise tenants an ideal environment to thrive.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        Our holistic workspace ecosystem integrates high-performance office towers, extensive green open-air plazas, premium wellness facilities, and curated lifestyle amenities—all within a secure, tech-enabled micro-city.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3 text-slate-200">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Zero-Carbon Footprint Strategy</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-200">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Tier-3 Data Infrastructure</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-200">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Integrated Transport Hub</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-200">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>24/7 Command Center Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights & Key Capabilities -->
+    <section id="highlights" class="py-24 bg-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Park Highlights</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Built for Global Enterprise Excellence</h2>
+                <p class="text-slate-400 mt-4 text-base">Unmatched infrastructure standards built to empower the world's most demanding technology and financial institutions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Highlight Card 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-navy-950 transition-colors">
+                        <i class="fa-solid fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Sustainable Micro-Climate</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Features 35% dedicated native botanical landscaping, rainwater harvesting systems, and solar micro-grids minimizing environmental impact.
+                    </p>
+                </div>
+
+                <!-- Highlight Card 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-navy-950 transition-colors">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">AI Safety & Cyber Protection</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Integrated CCTV matrix with facial recognition, optical barrier gates, high-speed fiber ring redundancies, and dedicated security teams.
+                    </p>
+                </div>
+
+                <!-- Highlight Card 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-navy-950 transition-colors">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">100% Power Redundancy</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Dual-feed high-voltage utility sub-stations backed by N+1 intelligent diesel generators guaranteeing uninterrupted business operations.
+                    </p>
+                </div>
+
+                <!-- Highlight Card 4 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-navy-950 transition-colors">
+                        <i class="fa-solid fa-microchip text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Smart Building IoT</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Automated air quality controls (MERV 13 filtration), smart occupancy sensors, and contact-free elevator dispatching systems.
+                    </p>
+                </div>
+
+                <!-- Highlight Card 5 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-navy-950 transition-colors">
+                        <i class="fa-solid fa-car-battery text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">EV & Transit Connectivity</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Over 200 fast EV charging ports, intra-campus electric shuttles, direct metro bridge access, and structured multi-level parking.
+                    </p>
+                </div>
+
+                <!-- Highlight Card 6 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:bg-emerald-500 group-hover:text-navy-950 transition-colors">
+                        <i class="fa-solid fa-hotel text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">On-site Hospitality</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Integrated 5-star business hotel, executive serviced apartments, and specialized VIP guest suites within walking distance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Interactive Showcase Section -->
+    <section id="amenities" class="py-24 bg-navy-900/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Lifestyle & Work Experience</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">World-Class Amenities</h2>
+                <p class="text-slate-400 mt-4">Curated lifestyle spaces that keep employees energized, engaged, and inspired.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" id="amenity-tabs">
+                <button onclick="switchAmenity('gym')" id="btn-gym" class="amenity-tab-btn active px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 bg-emerald-500 text-navy-950 shadow-md">
+                    <i class="fa-solid fa-dumbbell mr-2"></i>Fitness & Wellness
+                </button>
+                <button onclick="switchAmenity('dining')" id="btn-dining" class="amenity-tab-btn px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 bg-navy-800 text-slate-300 hover:text-white hover:bg-slate-800">
+                    <i class="fa-solid fa-utensils mr-2"></i>Culinary Boulevard
+                </button>
+                <button onclick="switchAmenity('auditorium')" id="btn-auditorium" class="amenity-tab-btn px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 bg-navy-800 text-slate-300 hover:text-white hover:bg-slate-800">
+                    <i class="fa-solid fa-masks-theater mr-2"></i>Auditorium & Events
+                </button>
+                <button onclick="switchAmenity('green')" id="btn-green" class="amenity-tab-btn px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 bg-navy-800 text-slate-300 hover:text-white hover:bg-slate-800">
+                    <i class="fa-solid fa-tree mr-2"></i>Open Amphitheater & Parks
+                </button>
+            </div>
+
+            <!-- Tab Content Display -->
+            <div class="glass-card rounded-3xl overflow-hidden p-6 sm:p-10 border border-slate-800">
+                <!-- Gym Content -->
+                <div id="content-gym" class="amenity-content grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Health & Vitality</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white">State-of-the-Art Fitness Arena</h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Featuring a 25,000 sq ft comprehensive fitness center equipped with modern cardio zones, Olympic lifting stations, indoor lap pools, spin studios, and personal training options.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Dedicated Yoga & Pilates Studio</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Hydrotherapy Steam & Sauna Suites</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> On-site Sports Therapists & Nutritionists</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-72 sm:h-96">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" alt="Gym & Fitness Center" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Dining Content -->
+                <div id="content-dining" class="amenity-content hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Gastronomy</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white">Global Gourmet Food Hall</h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            A vibrant 500-seat multi-cuisine dining destination featuring artisan coffee roasters, farm-to-table lunch pop-ups, international food courts, and executive dining rooms.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> 18+ Specialty Dining Outlets</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Organic Healthy Salad & Juice Bars</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Outdoor Terrace & Cafe Lounges</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-72 sm:h-96">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" alt="Dining Facilities" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Auditorium Content -->
+                <div id="content-auditorium" class="amenity-content hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Conferences & Keynotes</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white">800-Seat Multi-Purpose Convention Center</h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Designed to host international tech summits, product launches, and enterprise town halls equipped with 4K LED video walls, acoustic insulation, and broadcast-grade production facilities.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Simultaneous Translation & Streaming Booths</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Breakout Workshop Rooms</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Dedicated Event Catering Kitchen</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-72 sm:h-96">
+                        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1000&auto=format&fit=crop" alt="Convention Center & Auditorium" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Green Spaces Content -->
+                <div id="content-green" class="amenity-content hidden grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Biophilic Retreat</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white">Central Plaza & Outdoor Amphitheater</h3>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Lush urban gardens, tranquil water features, outdoor Wi-Fi working pods, and an open-air amphitheater hosting community networking events, music sessions, and cultural showcases.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> 2km Shaded Jogging & Walking Track</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Outdoor Solar Powered Workstations</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-3"></i> Zen Reflection Ponds & Oxygen Parks</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-72 sm:h-96">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000&auto=format&fit=crop" alt="Campus Green Spaces" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Availability & Floor Plan Overview -->
+    <section id="spaces" class="py-24 bg-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Real Estate Availability</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Leasing Spaces & Floor Options</h2>
+                </div>
+                <p class="text-slate-400 max-w-md mt-4 md:mt-0 text-sm">
+                    Flexible floor plates scalable from medium-sized development centers to multi-tower enterprise headquarters.
+                </p>
+            </div>
+
+            <!-- Space Options Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Space Card 1 -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-emerald-500/40 transition-all group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Tower Alpha</span>
+                            <span class="text-xs text-slate-400 font-medium">Ready to Occupy</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Executive Suites</h3>
+                        <div class="text-3xl font-extrabold text-emerald-400 mb-6">15,000 - 35,000 <span class="text-sm font-normal text-slate-400">Sq. Ft.</span></div>
+                        
+                        <div class="space-y-3 border-t border-b border-slate-800 py-6 mb-6 text-sm text-slate-300">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Floor Efficiency:</span>
+                                <span class="font-semibold text-white">88% Warm Shell</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Ceiling Height:</span>
+                                <span class="font-semibold text-white">4.2 Meters Clear</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Column Grid:</span>
+                                <span class="font-semibold text-white">11m x 11m Spacing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-xl font-semibold text-center text-white bg-slate-800 hover:bg-emerald-500 hover:text-navy-950 transition-all">Request Floorplan PDF</a>
+                </div>
+
+                <!-- Space Card 2 -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between relative border-2 border-emerald-500/50 hover:border-emerald-400 transition-all group shadow-xl">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-0.5 rounded-full bg-emerald-500 text-navy-950 text-xs font-extrabold uppercase">Most Demanded</div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Tower Beta & Gamma</span>
+                            <span class="text-xs text-slate-400 font-medium">Q3 Availability</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Enterprise Floor Plate</h3>
+                        <div class="text-3xl font-extrabold text-emerald-400 mb-6">45,000 - 75,000 <span class="text-sm font-normal text-slate-400">Sq. Ft.</span></div>
+                        
+                        <div class="space-y-3 border-t border-b border-slate-800 py-6 mb-6 text-sm text-slate-300">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Floor Efficiency:</span>
+                                <span class="font-semibold text-white">91% Turnkey Fit-out</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Ceiling Height:</span>
+                                <span class="font-semibold text-white">4.5 Meters Clear</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Column Grid:</span>
+                                <span class="font-semibold text-white">12m x 12m Column-Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-xl font-semibold text-center text-navy-950 bg-emerald-400 hover:bg-emerald-300 transition-all">Request Floorplan PDF</a>
+                </div>
+
+                <!-- Space Card 3 -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-emerald-500/40 transition-all group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Campus Block D</span>
+                            <span class="text-xs text-slate-400 font-medium">Bespoke Lease</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Bespoke HQ Tower</h3>
+                        <div class="text-3xl font-extrabold text-emerald-400 mb-6">150,000+ <span class="text-sm font-normal text-slate-400">Sq. Ft.</span></div>
+                        
+                        <div class="space-y-3 border-t border-b border-slate-800 py-6 mb-6 text-sm text-slate-300">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Branding Rights:</span>
+                                <span class="font-semibold text-white">Exclusive Sky Signage</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Lobby Access:</span>
+                                <span class="font-semibold text-white">Private Dedicated Entrance</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Customization:</span>
+                                <span class="font-semibold text-white">Full Build-to-Suit</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-xl font-semibold text-center text-white bg-slate-800 hover:bg-emerald-500 hover:text-navy-950 transition-all">Request Floorplan PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tenants & Global Brands -->
+    <section id="tenants" class="py-20 bg-navy-900/80 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Trusted By Industry Leaders</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Home to Global Innovation Pioneers</h2>
+            </div>
+
+            <!-- Logo Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+                <div class="glass-card p-6 rounded-2xl flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="font-extrabold text-lg text-slate-300 tracking-wider"><i class="fa-brands fa-microsoft text-2xl mr-2 text-blue-400"></i>MICRO</span>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="font-extrabold text-lg text-slate-300 tracking-wider"><i class="fa-brands fa-google text-2xl mr-2 text-red-400"></i>GOOG</span>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="font-extrabold text-lg text-slate-300 tracking-wider"><i class="fa-brands fa-amazon text-2xl mr-2 text-amber-400"></i>AMZN</span>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="font-extrabold text-lg text-slate-300 tracking-wider"><i class="fa-brands fa-apple text-2xl mr-2 text-slate-200"></i>APPL</span>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="font-extrabold text-lg text-slate-300 tracking-wider"><i class="fa-brands fa-meta text-2xl mr-2 text-blue-500"></i>META</span>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="font-extrabold text-lg text-slate-300 tracking-wider"><i class="fa-brands fa-ibm text-2xl mr-2 text-blue-300"></i>IBMX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Accessibility Section -->
+    <section id="location" class="py-24 bg-navy-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Strategic Connectivity</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">Connected to Key Transportation Arteries</h2>
+                    <p class="text-slate-300 leading-relaxed mb-8">
+                        Situated at the primary economic corridor, Embassy Knowledge Park offers swift connectivity to the international airport, residential hubs, and downtown commercial centers.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                                <i class="fa-solid fa-plane text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">International Airport</h4>
+                                <p class="text-slate-400 text-sm">25 Minutes direct drive via high-speed elevated expressway.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                                <i class="fa-solid fa-train-subway text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Direct Metro Station</h4>
+                                <p class="text-slate-400 text-sm">Dedicated sky-walk connection directly to the campus lobby.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                                <i class="fa-solid fa-house-user text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Residential Ecosystems</h4>
+                                <p class="text-slate-400 text-sm">Within 5-15 mins reach of premium residential townships & international schools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Map UI Placeholder Card -->
+                <div class="glass-card p-4 rounded-3xl border border-slate-800 relative overflow-hidden">
+                    <div class="relative h-96 rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center group">
+                        <!-- Stylized Map Graphic Image -->
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1000&auto=format&fit=crop" alt="Campus Map Overlay" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                        
+                        <!-- Map Marker Pin Pointer -->
+                        <div class="absolute flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-emerald-500 text-navy-950 flex items-center justify-center text-xl font-bold shadow-2xl animate-bounce">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <span class="bg-navy-950/90 text-white text-xs font-semibold px-3 py-1 rounded-full border border-emerald-500/40 mt-1 shadow-lg">Embassy Knowledge Park</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Inquiry Form Section -->
+    <section id="contact" class="py-24 bg-navy-900/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 relative">
+                <div class="text-center mb-10">
+                    <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Connect With Leasing Team</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Schedule a Private Campus Tour</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">Discover tailored office space solutions for your organization.</p>
+                </div>
+
+                <!-- Contact Form -->
+                <form id="leasing-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first-name" class="block text-xs font-semibold text-slate-300 uppercase mb-2">First Name *</label>
+                            <input type="text" id="first-name" required class="w-full bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400 transition-colors" placeholder="Jane">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Last Name *</label>
+                            <input type="text" id="last-name" required class="w-full bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400 transition-colors" placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="work-email" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Corporate Email *</label>
+                            <input type="email" id="work-email" required class="w-full bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400 transition-colors" placeholder="jane.doe@company.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" required class="w-full bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400 transition-colors" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="company" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Company Name</label>
+                            <input type="text" id="company" class="w-full bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400 transition-colors" placeholder="Acme Technologies Inc.">
+                        </div>
+                        <div>
+                            <label for="space-needed" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Required Area (Sq. Ft.)</label>
+                            <select id="space-needed" class="w-full bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400 transition-colors">
+                                <option value="15k-35k">15,000 - 35,000 Sq. Ft.</option>
+                                <option value="35k-75k">35,000 - 75,000 Sq. Ft.</option>
+                                <option value="75k+">75,000+ Sq. Ft. (HQ / Build-to-Suit)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Message / Special Requirements</label>
+                        <textarea id="message" rows="4" class="w-full bg-navy-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-400 transition-colors" placeholder="Please share expected occupancy timeline or specific fit-out needs..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl font-bold text-navy-950 bg-emerald-400 hover:bg-emerald-300 shadow-lg shadow-emerald-500/20 transition-all text-base">
+                        Submit Leasing Inquiry
+                    </button>
+                </form>
+
+                <!-- Feedback Toast Box -->
+                <div id="form-success" class="hidden mt-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500 text-emerald-300 text-center text-sm font-medium">
+                    <i class="fa-solid fa-circle-check mr-2"></i> Thank you! Your inquiry has been received. Our corporate leasing representative will reach out shortly.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 border-t border-slate-800 text-slate-400 text-sm py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4 md:col-span-1">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-navy-950 font-bold">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <span class="text-lg font-extrabold text-white">EMBASSY</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Redefining enterprise workspaces through sustainable, connected, and intelligent ecosystem design.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-emerald-400">About Campus</a></li>
+                        <li><a href="#highlights" class="hover:text-emerald-400">Highlights</a></li>
+                        <li><a href="#amenities" class="hover:text-emerald-400">Amenities</a></li>
+                        <li><a href="#spaces" class="hover:text-emerald-400">Leasing Options</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Certifications</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><span class="text-slate-300">IGBC Platinum Certified</span></li>
+                        <li><span class="text-slate-300">ISO 14001 Environmental Standard</span></li>
+                        <li><span class="text-slate-300">WELL Health-Safety Rated</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact Info</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-2">
+                        Embassy Knowledge Park Main Gate,<br>Outer Ring Tech Corridor, 560103
+                    </p>
+                    <p class="text-xs text-slate-300"><i class="fa-solid fa-envelope mr-2 text-emerald-400"></i>leasing@embassyknowledgepark.com</p>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Embassy Knowledge Park. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-300">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-300">ESG Report</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Amenities Tab Switching Logic
+        function switchAmenity(tabKey) {
+            // Hide all tab content elements
+            const contents = document.querySelectorAll('.amenity-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Reset all tab button styles
+            const tabButtons = document.querySelectorAll('.amenity-tab-btn');
+            tabButtons.forEach(btn => {
+                btn.classList.remove('bg-emerald-500', 'text-navy-950', 'shadow-md');
+                btn.classList.add('bg-navy-800', 'text-slate-300');
+            });
+
+            // Activate selected tab content and styling
+            const activeContent = document.getElementById(`content-${tabKey}`);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+            }
+
+            const activeBtn = document.getElementById(`btn-${tabKey}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-navy-800', 'text-slate-300');
+                activeBtn.classList.add('bg-emerald-500', 'text-navy-950', 'shadow-md');
+            }
+        }
+
+        // Leasing Contact Form Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const successBox = document.getElementById('form-success');
+            const form = document.getElementById('leasing-form');
+            
+            // Display confirmation feedback without breaking window context
+            successBox.classList.remove('hidden');
+            form.reset();
+
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
