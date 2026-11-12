@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#553B2B">
+
+  <!-- SEO Meta Tags -->
+  <title>ABHEE Celestial City | Ready-to-Move 2 &amp; 3 BHK Homes in Gunjur, Bengaluru</title>
+
+  <meta name="description" content="Discover ABHEE Celestial City in Gunjur, Bengaluru. Ready-to-move 2 & 3 BHK homes, 73% open space, 25,000 sq. ft. clubhouse and 35+ lifestyle amenities.">
+  <meta name="keywords" content="ABHEE Celestial City, Abhee Ventures, 2 BHK in Gunjur, 3 BHK in Gunjur, ready to move apartments Bengaluru, Varthur Sarjapur Road">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- ABHEE Favicon -->
+  <link rel="icon" type="image/png" href="./images/abhee-favicon.png">
+
+  <!-- Open Graph SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ABHEE Celestial City | Premium 2 & 3 BHK Homes">
+  <meta property="og:description" content="Ready-to-move 2 & 3 BHK homes at ABHEE Celestial City, Gunjur, Bengaluru.">
+  <meta property="og:image" content="./images/gallery-01.png">
+
+  <!-- Twitter SEO -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ABHEE Celestial City | Gunjur, Bengaluru">
+  <meta name="twitter:description" content="Explore ready-to-move 2 & 3 BHK homes at ABHEE Celestial City, Gunjur.">
+  <meta name="twitter:image" content="./images/gallery-01.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              800: '#10264d',
+              900: '#091b3a',
+              950: '#06132b'
+            },
+            bluebrand: {
+              300: '#75d9ff',
+              400: '#36c5f4',
+              500: '#079bd3',
+              600: '#087bb8',
+              700: '#07558f'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      background: #FFFFFF;
+      color: #553B2B;
+    }
+
+    .section-pad {
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      color: #55cdf5;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -.045em;
+    }
+
+    .section-copy {
+      color: #aab8ca;
+      line-height: 1.85;
+    }
+
+    .glass {
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(90deg,rgba(4,13,31,.84) 0%,rgba(4,13,31,.5) 52%,rgba(4,13,31,.12) 100%),
+        linear-gradient(0deg,rgba(4,13,31,.72),transparent 50%);
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .nav-scrolled {
+      background: rgba(5,18,42,.96) !important;
+      box-shadow: 0 8px 30px rgba(0,0,0,.18);
+    }
+
+    .feature-card,
+    .amenity-card,
+    .location-card,
+    .price-card,
+    .master-card {
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .feature-card:hover,
+    .amenity-card:hover,
+    .location-card:hover,
+    .price-card:hover,
+    .master-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(54,197,244,.55);
+      box-shadow: 0 18px 45px rgba(0,0,0,.2);
+    }
+
+    .image-frame {
+      overflow: hidden;
+      border-radius: 22px;
+    }
+
+    .image-frame img {
+      transition: transform .7s ease;
+    }
+
+    .image-frame:hover img {
+      transform: scale(1.035);
+    }
+
+    .form-control {
+      width: 100%;
+      background: #fff;
+      color: #14243d;
+      border: 1px solid #dbe3ed;
+      border-radius: 10px;
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: #079bd3;
+      box-shadow: 0 0 0 3px rgba(7,155,211,.13);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: linear-gradient(110deg,#36c5f4,#087bb8);
+      color: #04162c;
+      font-weight: 800;
+      transition: .25s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(7,155,211,.25);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+    }
+
+    .ticker-line {
+      height: 1px;
+      background: linear-gradient(90deg,transparent,rgba(54,197,244,.7),transparent);
+    }
+
+    /* Lifestyle carousel */
+    .amenities-track {
+      display: flex;
+      width: max-content;
+      gap: 22px;
+      animation: amenitiesMoveRight 55s linear infinite;
+    }
+
+    .amenities-marquee {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .amenities-marquee:hover .amenities-track {
+      animation-play-state: paused;
+    }
+
+    .amenity-image-card {
+      width: 310px;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 18px;
+      position: relative;
+      border: 1px solid rgba(255,255,255,.12);
+      cursor: zoom-in;
+    }
+
+    .amenity-image-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      transition: transform .6s ease;
+    }
+
+    .amenity-image-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .amenity-image-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 35px 18px 18px;
+      background: linear-gradient(transparent,rgba(3,12,28,.9));
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      pointer-events: none;
+    }
+
+    @keyframes amenitiesMoveRight {
+      from {
+        transform: translateX(-50%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    /* LOCATION ADVANTAGES */
+    .location-map {
+      width: 100%;
+      height: 430px;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .location-map iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .location-map-label {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      padding: 13px 18px;
+      border-radius: 12px;
+      background: rgba(4,13,31,.92);
+      border: 1px solid rgba(54,197,244,.35);
+      pointer-events: none;
+    }
+
+    .location-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .location-tab {
+      padding: 12px 16px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 9px;
+      color: #cbd5e1;
+      background: rgba(255,255,255,.045);
+      font-size: 12px;
+      font-weight: 600;
+      transition: .25s ease;
+      cursor: pointer;
+    }
+
+    .location-tab:hover {
+      border-color: rgba(54,197,244,.65);
+      color: #fff;
+    }
+
+    .location-tab.active-tab {
+      color: #04162c;
+      background: linear-gradient(110deg,#75d9ff,#36c5f4);
+      border-color: #75d9ff;
+      box-shadow: 0 6px 20px rgba(7,155,211,.18);
+    }
+
+    .location-panel {
+      padding: 28px 32px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      background: linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+    }
+
+    .location-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 15px 2px;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+    }
+
+    .location-item:last-child {
+      border-bottom: 0;
+    }
+
+    .location-name {
+      color: #dbe5f1;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .location-distance {
+      color: #75d9ff;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* Full-screen image preview */
+    .image-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,.95);
+      align-items: center;
+      justify-content: center;
+      padding: 55px 24px 24px;
+    }
+
+    .image-lightbox.active {
+      display: flex;
+    }
+
+    .image-lightbox img {
+      max-width: 95vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 5px;
+      cursor: default;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 25px;
+      color: white;
+      font-size: 38px;
+      line-height: 1;
+      cursor: pointer;
+      background: none;
+      border: none;
+      z-index: 2;
+    }
+
+    .clickable-image {
+      cursor: zoom-in;
+    }
+
+    @media(max-width:767px) {
+      .section-pad {
+        padding: 72px 0;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(0deg,rgba(4,13,31,.88),rgba(4,13,31,.3));
+      }
+
+      .hero-video {
+        object-position: 58% center;
+      }
+
+      .amenity-image-card {
+        width: 260px;
+      }
+
+      .amenity-image-card img {
+        height: 205px;
+      }
+
+      .location-map {
+        height: 330px;
+      }
+
+      .location-panel {
+        padding: 20px;
+      }
+
+      .location-tab {
+        padding: 10px 11px;
+        font-size: 11px;
+      }
+
+      .image-lightbox {
+        padding: 55px 12px 12px;
+      }
+
+      .image-lightbox img {
+        max-width: 96vw;
+        max-height: 86vh;
+      }
+
+      .lightbox-close {
+        right: 15px;
+        top: 12px;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      .amenities-track {
+        animation: none;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Light-orange project colour scrollbar */
+    html {
+      scrollbar-color: #E99A63 #FFF7F1;
+      scrollbar-width: thin;
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FFF7F1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #E99A63;
+      border: 2px solid #FFF7F1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D9824B;
+    }
+  
+    /* ABHEE CELESTIAL CITY — WARM NEUTRAL THEME */
+    :root {
+      --pure-white: #FFFFFF;
+      --soft-mint: #FFF7F1;
+      --whatsapp-mint: #FCE9DC;
+      --fresh-green: #F4C6A5;
+      --whatsapp-green: #E99A63;
+      --forest-green: #D9824B;
+      --deep-green: #553B2B;
+      --sage-ink: #4B392F;
+      --sage-muted: #806D60;
+    }
+
+    body {
+      background: var(--pure-white) !important;
+      color: var(--sage-ink) !important;
+    }
+
+    main > section.section-pad:nth-of-type(odd) {
+      background: var(--pure-white) !important;
+      color: var(--sage-ink) !important;
+    }
+
+    main > section.section-pad:nth-of-type(even) {
+      background: var(--soft-mint) !important;
+      color: var(--sage-ink) !important;
+    }
+
+    .section-title, h1, h2, h3, h4 { color: var(--deep-green); }
+    .section-copy { color: var(--sage-muted) !important; }
+    .eyebrow { color: var(--forest-green) !important; }
+
+    .glass, .feature-card, .amenity-card, .location-card, .price-card, .master-card {
+      background: var(--soft-mint) !important;
+      border: 1px solid rgba(217,130,75,.16) !important;
+      color: var(--deep-green) !important;
+      backdrop-filter: none;
+    }
+
+    .glass p, .feature-card p, .amenity-card p, .price-card p {
+      color: var(--sage-muted) !important;
+    }
+
+    /* Keep the header dark as requested, with clear white navigation. */
+    #navbar {
+      background: rgba(85,59,43,.98) !important;
+      border-color: rgba(255,255,255,.16) !important;
+      box-shadow: 0 8px 28px rgba(85,59,43,.16) !important;
+    }
+    #navbar a, #navbar button { color: #FFFFFF !important; }
+    #navbar .btn-primary { color: #FFFFFF !important; }
+    #navbar img { filter: none; }
+    #navbar .mobile-link { color: #FFFFFF !important; }
+    #mobile-menu {
+      background: #553B2B !important;
+      border-color: rgba(255,255,255,.16) !important;
+    }
+    .nav-scrolled {
+      background: rgba(85,59,43,.99) !important;
+      box-shadow: 0 8px 30px rgba(85,59,43,.20) !important;
+    }
+
+    /* Bright WhatsApp green for primary calls to action. */
+    .btn-primary {
+      background: var(--whatsapp-green) !important;
+      color: #FFFFFF !important;
+      border: 1px solid var(--whatsapp-green) !important;
+      box-shadow: 0 5px 14px rgba(37,211,102,.18) !important;
+    }
+    .btn-primary:hover {
+      background: var(--forest-green) !important;
+      border-color: var(--forest-green) !important;
+      color: #FFFFFF !important;
+    }
+    .btn-outline {
+      border-color: var(--forest-green) !important;
+      color: var(--forest-green) !important;
+      background: #FFFFFF !important;
+    }
+    .btn-outline:hover {
+      background: var(--whatsapp-mint) !important;
+    }
+
+    .text-bluebrand-300, .text-bluebrand-400, .text-bluebrand-500 {
+      color: var(--forest-green) !important;
+    }
+    .bg-bluebrand-500\/15 { background: rgba(252,233,220,.88) !important; }
+
+    .location-tab {
+      color: var(--deep-green) !important;
+      border-color: rgba(217,130,75,.25) !important;
+      background: #FFFFFF !important;
+    }
+    .location-tab.active-tab {
+      background: var(--whatsapp-green) !important;
+      color: #FFFFFF !important;
+      border-color: var(--whatsapp-green) !important;
+    }
+    .location-panel {
+      background: #FFFFFF !important;
+      border-color: rgba(217,130,75,.18) !important;
+    }
+    .location-name { color: var(--sage-ink) !important; }
+    .location-distance { color: var(--forest-green) !important; }
+    .location-map-label {
+      background: rgba(255,247,241,.98) !important;
+      border-color: var(--fresh-green) !important;
+    }
+    .location-map-label p { color: var(--deep-green) !important; }
+
+    .form-control { border-color: #F0D2BE; }
+    .form-control:focus {
+      border-color: var(--whatsapp-green);
+      box-shadow: 0 0 0 3px rgba(233,154,99,.18);
+    }
+
+    /* Header and footer share forest green; every footer text element is solid white. */
+    footer {
+      background: #553B2B !important;
+      color: #FFFFFF !important;
+      border-color: rgba(255,255,255,.18) !important;
+    }
+    footer,
+    footer *,
+    footer *::before,
+    footer *::after {
+      color: #FFFFFF !important;
+      opacity: 1 !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      text-shadow: none !important;
+    }
+    footer a:hover {
+      color: #FCE9DC !important;
+      -webkit-text-fill-color: #FCE9DC !important;
+    }
+    footer img {
+      height: 5rem !important;
+      max-width: 260px !important;
+      width: auto !important;
+      object-fit: contain !important;
+    }
+
+    /* Natural project imagery with a controlled overlay for white hero text. */
+    .hero-overlay {
+      background:
+        linear-gradient(90deg,rgba(66,43,29,.68) 0%,rgba(66,43,29,.42) 55%,rgba(66,43,29,.12) 100%),
+        linear-gradient(0deg,rgba(66,43,29,.48),rgba(66,43,29,.06) 72%) !important;
+    }
+    #home h1 {
+      color: #FFFFFF !important;
+      text-shadow: 0 3px 22px rgba(0,0,0,.42);
+    }
+    #home h1 span { color: #FCE9DC !important; }
+    #home p {
+      color: #FFFFFF !important;
+      text-shadow: 0 2px 12px rgba(0,0,0,.4);
+    }
+    #home .glass {
+      background: rgba(85,59,43,.72) !important;
+      border-color: rgba(255,255,255,.28) !important;
+    }
+    #home .glass div { color: #FFFFFF !important; }
+
+    .master-plan-image {
+      filter: blur(2.2px);
+      transform: scale(1.015);
+      transition: filter .25s ease, transform .25s ease;
+      cursor: pointer;
+    }
+    .master-plan-image:hover {
+      filter: blur(1.5px);
+      transform: scale(1.025);
+    }
+
+    .sage-table {
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border-radius:16px;
+      background:#FFFFFF;
+      color:var(--sage-ink);
+    }
+    .sage-table th {
+      background:var(--forest-green);
+      color:#FFFFFF;
+      padding:17px 20px;
+      text-align:left;
+      font-size:13px;
+      letter-spacing:.04em;
+    }
+    .sage-table td {
+      padding:19px 20px;
+      border-bottom:1px solid #F4E4D8;
+      font-size:14px;
+    }
+    .sage-table tr:last-child td { border-bottom:0; }
+    .on-request-link {
+      color:var(--forest-green);
+      font-weight:800;
+      text-decoration:underline;
+      text-underline-offset:4px;
+      cursor:pointer;
+    }
+    .brochure-btn {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:13px 22px;
+      border-radius:999px;
+      background:var(--whatsapp-green);
+      color:#FFFFFF;
+      font-weight:700;
+      margin-top:28px;
+    }
+    .brochure-btn:hover { background:var(--forest-green); }
+
+    .gallery-card {
+      overflow:hidden;
+      border-radius:10px;
+      background:#FFFFFF;
+      box-shadow:0 5px 16px rgba(49,92,59,.08);
+      max-width:100%;
+    }
+    .gallery-card img {
+      width:100%;
+      height:145px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-card figcaption {
+      padding:8px 10px;
+      color:var(--deep-green);
+      font-weight:700;
+      font-size:11px;
+    }
+
+    .popup-overlay {
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:100000;
+      background:rgba(50,38,30,.62);
+      padding:18px;
+      align-items:center;
+      justify-content:center;
+    }
+    .popup-overlay.active { display:flex; }
+    .popup-card {
+      width:min(100%,390px);
+      background:#FFFFFF;
+      border-radius:20px;
+      padding:25px;
+      color:var(--sage-ink);
+      box-shadow:0 25px 80px rgba(0,0,0,.25);
+      position:relative;
+    }
+    .popup-close {
+      position:absolute;
+      right:15px;
+      top:10px;
+      border:0;
+      background:transparent;
+      font-size:26px;
+      color:var(--forest-green);
+      cursor:pointer;
+    }
+    .floating-contact {
+      position:fixed;
+      right:18px;
+      bottom:22px;
+      z-index:9000;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .floating-contact a {
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#FFFFFF;
+      font-size:22px;
+      box-shadow:0 5px 18px rgba(0,0,0,.18);
+    }
+    .floating-whatsapp { background:#25D366; color:#FFFFFF; }
+    .floating-call { background:var(--forest-green); }
+
+    @media(max-width:640px) {
+      .sage-table th, .sage-table td { padding:13px 10px; font-size:12px; }
+      .gallery-card img { height:105px; }
+      .gallery-card figcaption { padding:7px 8px; font-size:10px; }
+      .floating-contact { right:12px; bottom:14px; }
+      .floating-contact a { width:48px; height:48px; }
+    }
+
+  </style>
+</head>
+
+<body class="antialiased selection:bg-bluebrand-500 selection:text-white">
+
+  <!-- HEADER -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-navy-950/75 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-[76px] flex items-center justify-between gap-5">
+
+        <a href="#home" class="flex items-center shrink-0" aria-label="ABHEE Celestial City home">
+          <img
+            src="./images/abhee-ventures-logo-white.png"
+            alt="ABHEE Ventures"
+            class="h-11 md:h-12 w-auto max-w-[190px] object-contain"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+
+          <span class="hidden text-white font-extrabold tracking-wide">
+            ABHEE
+            <small class="block text-bluebrand-300 text-[10px] tracking-[.22em]">
+              CELESTIAL CITY
+            </small>
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7 text-[13px] font-semibold text-slate-200">
+          <a class="hover:text-bluebrand-300" href="#overview">Overview</a>
+          <a class="hover:text-bluebrand-300" href="#highlights">Highlights</a>
+          <a class="hover:text-bluebrand-300" href="#masterplan">Master Plan</a>
+          <a class="hover:text-bluebrand-300" href="#amenities">Amenities</a>
+          <a class="hover:text-bluebrand-300" href="#residences">Residences</a>
+          <a class="hover:text-bluebrand-300" href="#location">Location</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#enquire" class="hidden sm:inline-flex btn-primary !py-3 !px-5 text-xs">
+            Enquire Now <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <button
+            id="mobile-menu-btn"
+            class="lg:hidden w-10 h-10 rounded-lg border border-white/15 text-white"
+            aria-label="Open navigation"
+            aria-expanded="false">
+            <i id="menu-icon" class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-navy-950 border-t border-white/10 px-5 py-4 space-y-1">
+      <a class="mobile-link block py-3 text-slate-200" href="#overview">Project Overview</a>
+      <a class="mobile-link block py-3 text-slate-200" href="#highlights">Highlights</a>
+      <a class="mobile-link block py-3 text-slate-200" href="#masterplan">Master Plan</a>
+      <a class="mobile-link block py-3 text-slate-200" href="#amenities">Amenities</a>
+      <a class="mobile-link block py-3 text-slate-200" href="#residences">Configurations & Pricing</a>
+      <a class="mobile-link block py-3 text-slate-200" href="#location">Location</a>
+      <a class="mobile-link block py-3 text-bluebrand-300 font-bold" href="#enquire">Enquire Now</a>
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- HERO VIDEO -->
+    <section id="home" class="relative min-h-[780px] h-[100svh] max-h-[1050px] flex items-end md:items-center overflow-hidden">
+
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-label="ABHEE Celestial City project video">
+
+        <source src="./videos/CC_ Full video.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+
+      </video>
+
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#06132b]/70 to-transparent"></div>
+
+      <div class="relative z-10 max-w-7xl w-full mx-auto px-5 sm:px-8 lg:px-10 pb-24 md:pb-0 pt-36">
+
+        <div class="max-w-3xl">
+
+          <div class="inline-flex items-center gap-2 rounded-full border border-bluebrand-300/40 bg-bluebrand-500/15 px-4 py-2 text-[10px] sm:text-xs tracking-[.18em] uppercase font-bold text-bluebrand-300 mb-6">
+            <span class="w-2 h-2 rounded-full bg-bluebrand-300 animate-pulse"></span>
+            READY TO MOVE IN · GUNJUR, EAST BENGALURU
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl lg:text-[76px] leading-[1.04] tracking-[-.055em] font-extrabold text-white">
+            ABHEE<br>
+            <span class="text-bluebrand-300">Celestial City</span>
+          </h1>
+
+          <p class="mt-6 max-w-xl text-base sm:text-xl leading-relaxed text-slate-200">
+            READY TO MOVE IN. Made for the life you want.
+          </p>
+
+          <div class="mt-5 inline-flex items-center gap-3 rounded-xl border border-bluebrand-300/40 bg-bluebrand-500/15 px-4 py-3 text-white">
+            <span class="text-2xl sm:text-3xl font-extrabold text-bluebrand-300">46</span>
+            <span class="text-xs sm:text-sm font-semibold uppercase tracking-wider">Homes currently available</span>
+          </div>
+
+          <p class="mt-3 max-w-2xl text-sm sm:text-base leading-7 text-slate-300">
+            Discover thoughtfully planned 2 & 3 BHK homes at Gunjur, on Varthur–Sarjapur Road, Bengaluru.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#residences" class="btn-primary">
+              Explore Residences <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#amenities" class="btn-outline">
+              Discover Amenities
+            </a>
+          </div>
+
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 sm:gap-5 max-w-3xl mt-12 md:mt-16">
+
+          <div class="glass rounded-xl p-4 sm:p-5">
+            <div class="text-2xl sm:text-3xl font-extrabold text-white">
+              5<span class="text-bluebrand-300"> Acres</span>
+            </div>
+            <div class="text-[10px] sm:text-xs text-slate-300 mt-1">Project Area</div>
+          </div>
+
+          <div class="glass rounded-xl p-4 sm:p-5">
+            <div class="text-2xl sm:text-3xl font-extrabold text-white">397</div>
+            <div class="text-[10px] sm:text-xs text-slate-300 mt-1">Apartments</div>
+          </div>
+
+          <div class="glass rounded-xl p-4 sm:p-5">
+            <div class="text-2xl sm:text-3xl font-extrabold text-white">25K</div>
+            <div class="text-[10px] sm:text-xs text-slate-300 mt-1">Sq. Ft. Clubhouse</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="absolute bottom-5 right-6 hidden md:flex items-center gap-3 text-[10px] tracking-[.2em] uppercase text-white/70">
+        <span class="w-12 ticker-line"></span>
+        Scroll to explore
+      </div>
+
+    </section>
+
+    <!-- PROJECT OVERVIEW -->
+    <section id="overview" class="section-pad bg-[#091b3a]">
+
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          <div class="relative">
+
+            <div class="image-frame relative z-10">
+              <img
+                src="./images/gallery-01.png"
+                alt="ABHEE Celestial City residential towers"
+                class="w-full h-[360px] sm:h-[520px] object-cover"
+                loading="lazy">
+            </div>
+
+            <div class="absolute -bottom-6 -right-5 w-2/3 h-2/3 border border-bluebrand-400/40 rounded-3xl"></div>
+
+          </div>
+
+          <div>
+
+            <div class="eyebrow mb-4">The Project</div>
+
+            <h2 class="section-title">
+              A new perspective on
+              <span class="text-bluebrand-300">integrated living.</span>
+            </h2>
+
+            <p class="section-copy mt-6">
+              ABHEE Celestial City by Abhee Ventures is a ready-to-move residential community located at Gunjur, Varthur–Sarjapur Road, East Bengaluru.
+            </p>
+
+            <p class="section-copy mt-4">
+              Spread across approximately 5 acres, the project features 3 residential towers with around 397 apartments and thoughtfully planned lifestyle spaces.
+            </p>
+
+            <p class="section-copy mt-4">
+              Choose from 2 & 3 BHK homes, with approximately 73% open space, a 25,000 sq. ft. clubhouse and 35+ lifestyle amenities.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mt-8">
+
+              <div class="glass rounded-xl p-5">
+                <div class="text-3xl font-extrabold text-bluebrand-300">73<span class="text-xl">%</span></div>
+                <p class="text-xs text-slate-300 mt-2">Open Space</p>
+              </div>
+
+              <div class="glass rounded-xl p-5">
+                <div class="text-3xl font-extrabold text-bluebrand-300">35<span class="text-xl">+</span></div>
+                <p class="text-xs text-slate-300 mt-2">Lifestyle Amenities</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ABHEE VENTURES -->
+    <section class="section-pad bg-[#06132b]">
+
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <div class="eyebrow mb-4">The Developer</div>
+
+            <h2 class="section-title">
+              A vision for
+              <span class="text-bluebrand-300">better living.</span>
+            </h2>
+
+            <p class="section-copy mt-6">
+              Abhee Ventures is the developer of ABHEE Celestial City, a residential community designed around comfortable homes, open spaces and everyday lifestyle needs.
+            </p>
+
+            <p class="section-copy mt-4">
+              At ABHEE Celestial City, the focus is on ready-to-move 2 & 3 BHK homes, landscaped open areas and amenities for residents of all ages.
+            </p>
+          </div>
+
+          <div class="image-frame">
+            <img
+              src="./images/galllery-02.png"
+              alt="ABHEE Celestial City development"
+              class="w-full h-[340px] sm:h-[440px] object-cover"
+              loading="lazy">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT HIGHLIGHTS -->
+    <section id="highlights" class="section-pad bg-[#091b3a]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="max-w-2xl mx-auto text-center mb-14">
+          <div class="eyebrow mb-4">Project Highlights</div>
+          <h2 class="section-title">Thoughtfully planned for <span class="text-bluebrand-300">everyday living.</span></h2>
+          <p class="section-copy mt-5">A ready-to-move residential community in Gunjur, East Bengaluru.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-building"></i></div><h3 class="font-bold text-lg mt-5">Approx. 5 Acres</h3><p class="section-copy text-sm mt-3">Residential development in Gunjur.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-house"></i></div><h3 class="font-bold text-lg mt-5">2 & 3 BHK Homes</h3><p class="section-copy text-sm mt-3">Thoughtfully planned apartment configurations.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-tree"></i></div><h3 class="font-bold text-lg mt-5">73% Open Space</h3><p class="section-copy text-sm mt-3">More room for open-air moments.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-people-roof"></i></div><h3 class="font-bold text-lg mt-5">25,000 Sq. Ft.</h3><p class="section-copy text-sm mt-3">Clubhouse for leisure and community activities.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-city"></i></div><h3 class="font-bold text-lg mt-5">3 Towers</h3><p class="section-copy text-sm mt-3">2 basements + ground + 26 upper floors.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-person-running"></i></div><h3 class="font-bold text-lg mt-5">35+ Amenities</h3><p class="section-copy text-sm mt-3">Spaces for fitness, recreation and wellness.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-key"></i></div><h3 class="font-bold text-lg mt-5">Ready to Move</h3><p class="section-copy text-sm mt-3">Homes ready for immediate occupancy.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-location-dot"></i></div><h3 class="font-bold text-lg mt-5">Gunjur</h3><p class="section-copy text-sm mt-3">Varthur–Sarjapur Road, East Bengaluru.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABHEE MASTER PLAN -->
+    <section id="masterplan" class="section-pad bg-[#06132b]">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="eyebrow mb-4">Explore the Development</div>
+          <h2 class="section-title">Project <span class="text-bluebrand-300">Master Plan.</span></h2>
+          <p class="section-copy mt-5">View the ABHEE Celestial City master plan. Select the plan to request the project details.</p>
+        </div>
+        <div class="master-card glass rounded-2xl overflow-hidden max-w-5xl mx-auto">
+          <div class="p-6 sm:p-7"><div class="eyebrow mb-3">ABHEE Celestial City</div><h3 class="text-xl sm:text-2xl font-bold">Project Master Plan</h3><p class="section-copy text-sm mt-3">Project layout supplied for ABHEE Celestial City.</p></div>
+          <div class="bg-white p-3 sm:p-5"><img src="./images/abhee-cc-master-plan.png" alt="ABHEE Celestial City project master plan" class="w-full h-auto object-contain master-plan-image js-masterplan-enquiry" loading="lazy" tabindex="0" role="button" aria-label="Enquire to view ABHEE Celestial City master plan"></div>
+        </div>
+        <div class="text-center mt-7"><button type="button" class="brochure-btn js-open-enquiry"><i class="fa-solid fa-file-pdf"></i> Download Brochure</button></div>
+      </div>
+    </section>
+
+    <!-- LIFESTYLE & AMENITIES -->
+    <section id="amenities" class="section-pad bg-[#091b3a]">
+
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <div class="grid lg:grid-cols-2 gap-6 lg:gap-16 items-end mb-12">
+
+          <div>
+            <div class="eyebrow mb-4">Lifestyle & Amenities</div>
+            <h2 class="section-title">
+              Spaces that bring
+              <span class="text-bluebrand-300">life together.</span>
+            </h2>
+          </div>
+
+          <div>
+            <p class="section-copy">
+              Thoughtfully curated spaces for wellness, recreation, fitness and community interaction. Explore the lifestyle experiences planned within ABHEE Celestial City.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="amenities-marquee">
+          <div class="amenities-track">
+            <div class="amenity-image-card"><img src="./images/amenities.png" alt="ABHEE Celestial City lifestyle amenities" loading="lazy"><div class="amenity-image-label">Lifestyle Amenities</div></div>
+            <div class="amenity-image-card"><img src="./images/amenities-Play-Ground2.webp" alt="ABHEE Celestial City residential spaces" loading="lazy"><div class="amenity-image-label">Residential Spaces</div></div>
+            <div class="amenity-image-card"><img src="./images/pool-courtyard.png" alt="ABHEE Celestial City landscaped spaces" loading="lazy"><div class="amenity-image-label">Landscaped Spaces</div></div>
+            <div class="amenity-image-card"><img src="./images/abhee-front-gate-viewt.jpg" alt="ABHEE Celestial City community spaces" loading="lazy"><div class="amenity-image-label">Community Spaces</div></div>
+            <div class="amenity-image-card" ><img src="./images/abhee-cc-garden.png" alt="" loading="lazy"><div class="amenity-image-label">Lifestyle Amenities</div></div>
+            
+            <div class="amenity-image-card" aria-hidden="true"><img src="./images/pool-courtyard.png" alt="" loading="lazy"><div class="amenity-image-label">Landscaped Spaces</div></div>
+            <div class="amenity-image-card" aria-hidden="true"><img src="./images/abhee-cc-garden.png" alt="" loading="lazy"><div class="amenity-image-label">Community Spaces</div></div>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+
+          <div class="amenity-card glass rounded-xl p-5">
+            <i class="fa-solid fa-water text-2xl text-bluebrand-300"></i>
+            <h3 class="font-bold mt-4">Swimming Pool</h3>
+            <p class="section-copy text-sm mt-2">A place to unwind and refresh.</p>
+          </div>
+
+          <div class="amenity-card glass rounded-xl p-5">
+            <i class="fa-solid fa-spa text-2xl text-bluebrand-300"></i>
+            <h3 class="font-bold mt-4">Meditation & Yoga</h3>
+            <p class="section-copy text-sm mt-2">Spaces for mindfulness and wellbeing.</p>
+          </div>
+
+          <div class="amenity-card glass rounded-xl p-5">
+            <i class="fa-solid fa-dumbbell text-2xl text-bluebrand-300"></i>
+            <h3 class="font-bold mt-4">Fitness Centre</h3>
+            <p class="section-copy text-sm mt-2">A dedicated place to work out.</p>
+          </div>
+
+          <div class="amenity-card glass rounded-xl p-5">
+            <i class="fa-solid fa-basketball text-2xl text-bluebrand-300"></i>
+            <h3 class="font-bold mt-4">Sports Court</h3>
+            <p class="section-copy text-sm mt-2">Sports and recreational facilities.</p>
+          </div>
+
+        </div>
+
+        <div class="glass rounded-2xl p-6 sm:p-8 mt-8">
+          <div class="flex flex-col md:flex-row gap-5 items-start md:items-center">
+            <div class="text-3xl text-bluebrand-300">
+              <i class="fa-solid fa-infinity"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">35+ Lifestyle Amenities</h3>
+              <p class="section-copy mt-2">
+                A range of lifestyle amenities supports fitness, recreation, wellness and community interaction.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONFIGURATIONS AND PRICING -->
+    <section id="residences" class="section-pad bg-[#06132b]">
+
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <div class="eyebrow mb-4">Find Your Home</div>
+          <h2 class="section-title">
+            Residences designed
+            <span class="text-bluebrand-300">around you.</span>
+          </h2>
+          <p class="section-copy mt-5">
+            Explore ready-to-move 2 & 3 BHK homes at ABHEE Celestial City, Gunjur.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl shadow-sm">
+          <table class="sage-table">
+            <thead>
+              <tr>
+                <th>Configuration</th>
+                <th>Size (sq. ft.)</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>2 BHK + 2T</strong></td><td>1,345–1,685</td><td><strong>₹1.41 Cr* onwards</strong></td></tr>
+              <tr><td><strong>3 BHK + 2T</strong></td><td>1,595–1,685</td><td><a href="#" class="on-request-link js-open-enquiry">On Request</a></td></tr>
+              <tr><td><strong>3 BHK + 3T</strong></td><td>1,895–1,990</td><td><a href="#" class="on-request-link js-open-enquiry">On Request</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-center">
+          <button type="button" class="brochure-btn js-open-enquiry" data-download-type="floor-plan">
+            <i class="fa-solid fa-file-pdf"></i> Download Floor Plan
+          </button>
+        </div>
+
+
+        <p class="text-xs text-slate-500 mt-5 text-center">
+          *Prices are indicative and subject to confirmation. Please contact the sales team for the latest details.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- LOCATION ADVANTAGES - INTERACTIVE SIX CATEGORY SECTION -->
+    <section id="location" class="section-pad bg-[#091b3a]">
+
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <div class="max-w-3xl mb-12">
+          <div class="eyebrow mb-4">Location Advantages</div>
+          <h2 class="section-title">
+            CONNECTED TO
+            <span class="text-bluebrand-300">WHAT MATTERS.</span>
+          </h2>
+          <p class="section-copy mt-5">
+            Located in Gunjur on Varthur–Sarjapur Road, East Bengaluru, with access to the wider Varthur, Sarjapur and Whitefield neighbourhoods.
+          </p>
+        </div>
+
+        <!-- WIDE PROJECT LOCATION MAP -->
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.7076997361055!2d77.7462828750752!3d12.898778487410175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0dce84ca47c1%3A0xec625feb4e9c1d09!2sAbhee%20Celestial%20City!5e1!3m2!1sen!2sin!4v1794402240227!5m2!1sen!2sin"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="ABHEE Celestial City Project Location">
+          </iframe>
+
+          <div class="location-map-label">
+            <p class="text-[10px] text-bluebrand-300 uppercase tracking-[.18em]">Project Location</p>
+            <p class="font-bold mt-1 text-white">ABHEE Celestial City</p>
+            <p class="text-xs text-slate-300 mt-1">Gunjur, Varthur–Sarjapur Road, Bengaluru</p>
+          </div>
+        </div>
+
+        <!-- SIX INTERACTIVE LOCATION CATEGORIES -->
+        <div class="location-tabs" id="locationTabs">
+          <button class="location-tab active-tab" data-category="airport" aria-pressed="true">
+            <i class="fa-solid fa-road mr-2"></i>Connectivity & Major Roads
+          </button>
+          <button class="location-tab" data-category="it" aria-pressed="false">
+            <i class="fa-solid fa-building mr-2"></i>IT & Employment Hubs
+          </button>
+          <button class="location-tab" data-category="education" aria-pressed="false">
+            <i class="fa-solid fa-graduation-cap mr-2"></i>Schools & Education
+          </button>
+          <button class="location-tab" data-category="healthcare" aria-pressed="false">
+            <i class="fa-solid fa-hospital mr-2"></i>Hospitals & Healthcare
+          </button>
+          <button class="location-tab" data-category="shopping" aria-pressed="false">
+            <i class="fa-solid fa-bag-shopping mr-2"></i>Shopping & Entertainment
+          </button>
+          <button class="location-tab" data-category="lifestyle" aria-pressed="false">
+            <i class="fa-solid fa-person-biking mr-2"></i>Sports, Recreation & Lifestyle
+          </button>
+        </div>
+
+        <!-- DESTINATIONS UPDATE WHEN A CATEGORY IS SELECTED -->
+        <div class="location-panel">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+            <div>
+              <div class="eyebrow">Explore Nearby</div>
+              <h3 id="locationHeading" class="text-2xl sm:text-3xl font-bold mt-2">
+                Connectivity & Major Roads
+              </h3>
+            </div>
+            <span class="text-xs text-slate-400">Nearby areas and facilities</span>
+          </div>
+
+          <div id="locationList" class="grid md:grid-cols-2 gap-x-12"></div>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-6 text-center">
+          Distances are approximate and may vary depending on the route and destination entrance.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ENQUIRY -->
+    <section id="enquire" class="section-pad bg-[#06132b]">
+
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <div class="eyebrow mb-4">Make your move</div>
+
+            <h2 class="section-title">
+              Your next chapter<br>
+              <span class="text-bluebrand-300">starts here.</span>
+            </h2>
+
+            <p class="section-copy mt-6 max-w-lg">
+              Share your details to receive information about ABHEE Celestial City, available configurations, pricing and site visits.
+            </p>
+
+            <div class="mt-9 space-y-5">
+
+              <div class="flex gap-4 items-center">
+                <span class="w-11 h-11 rounded-xl bg-bluebrand-500/15 text-bluebrand-300 flex items-center justify-center">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+
+                <div>
+                  <div class="font-semibold">Project Location</div>
+                  <div class="text-sm text-slate-400 mt-1">
+                    Gunjur, Varthur–Sarjapur Road, East Bengaluru
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex gap-4 items-center">
+                <span class="w-11 h-11 rounded-xl bg-bluebrand-500/15 text-bluebrand-300 flex items-center justify-center">
+                  <i class="fa-solid fa-building"></i>
+                </span>
+
+                <div>
+                  <div class="font-semibold">Developed by</div>
+                  <div class="text-sm text-slate-400 mt-1">Abhee Ventures</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-7 sm:p-9 text-[#553B2B] shadow-xl border border-[#FCE9DC]">
+            <h3 class="text-2xl font-extrabold text-[#553B2B]">Request a Callback</h3>
+            <p class="text-sm text-[#75685F] mt-2 mb-6">Enter your details and our sales team can contact you.</p>
+            <form id="enquiry-inline-form" class="space-y-4">
+              <div>
+                <label for="enquiry-inline-name" class="block text-sm font-bold text-[#553B2B] mb-2">Name</label>
+                <input id="enquiry-inline-name" name="name" type="text" autocomplete="name" placeholder="Enter your name" required class="form-control w-full rounded-xl border px-4 py-3 text-[#553B2B]">
+              </div>
+              <div>
+                <label for="enquiry-inline-mobile" class="block text-sm font-bold text-[#553B2B] mb-2">Mobile Number</label>
+                <input id="enquiry-inline-mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+() -]{8,18}" placeholder="Enter your mobile number" required class="form-control w-full rounded-xl border px-4 py-3 text-[#553B2B]">
+              </div>
+              <div>
+                <label for="enquiry-inline-requirement" class="block text-sm font-bold text-[#553B2B] mb-2">Configuration Requirement</label>
+                <select id="enquiry-inline-requirement" name="configuration_requirement" required class="form-control w-full rounded-xl border px-4 py-3 text-[#553B2B]">
+                  <option value="" disabled selected>Select BHK requirement</option>
+                  <option value="2 BHK">2 BHK</option>
+                  <option value="3 BHK">3 BHK</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-primary w-full justify-center">Book a site visit<i class="fa-solid fa-arrow-right"></i></button>
+              <p id="enquiry-inline-message" class="hidden rounded-lg bg-[#FCE9DC] p-3 text-sm font-semibold text-[#553B2B]" role="status"></p>
+            </form>
+            <a href="tel:+918088498367" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#553B2B] px-5 py-3 font-bold text-[#553B2B]">
+              <i class="fa-solid fa-phone"></i> Call Us: +91 80884 98367
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABHEE CELESTIAL CITY GALLERY -->
+<section id="gallery" class="section-pad bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="eyebrow mb-4">Project Gallery</div>
+
+      <h2 class="section-title">
+        A closer look at
+        <span style="color:#E99A62">your future home.</span>
+      </h2>
+
+      <p class="section-copy mt-4">
+        Explore the architecture, interiors and lifestyle spaces
+        at ABHEE Celestial City.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
+
+      <figure class="gallery-card">
+        <img src="./images/gallery-01.png"
+             alt="ABHEE Celestial City project view" loading="lazy">
+        <figcaption>Project Overview</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <img src="./images/gallery-04.png"
+             alt="ABHEE Celestial City residential view" loading="lazy">
+        <figcaption>Residential Living</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <img src="./images/gallery-03.png"
+             alt="ABHEE Celestial City architecture" loading="lazy">
+        <figcaption>Modern Architecture</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <img src="./images/abhee-cc-garden.png"
+             alt="ABHEE Celestial City lifestyle" loading="lazy">
+        <figcaption>Lifestyle Spaces</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <img src="./images/amenities.png"
+             alt="ABHEE Celestial City amenities" loading="lazy">
+        <figcaption>World-Class Amenities</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <img src="./images/Elevation-8-Abhee-Celestial-City.webp"
+             alt="ABHEE Celestial City exterior" loading="lazy">
+        <figcaption>Elegant Exteriors</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <img src="./images/pool-courtyard.png"
+             alt="ABHEE Celestial City development" loading="lazy">
+        <figcaption>Thoughtful Design</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <img src="./images/abhee-front-gate-viewt.jpg"
+             alt="ABHEE Celestial City residential spaces" loading="lazy">
+        <figcaption>Premium Residences</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <img src="./images/amenities-Play-Ground2.webp"
+             alt="ABHEE Celestial City surroundings" loading="lazy">
+        <figcaption>Inspired Living</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#040d1d] border-t border-white/10 pt-14 pb-8">
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+
+        <!-- ABHEE Ventures logo -->
+        <div>
+          <img
+            src="./images/abhee-ventures-logo-white-2.png"
+            alt="Abhee Ventures Logo"
+            class="h-20 w-auto max-w-[260px] object-contain"
+            loading="lazy">
+
+          <div class="mt-4 text-xs text-slate-300">
+            <span class="block uppercase tracking-wider text-slate-400">RERA Registration Number</span>
+            <span class="block mt-1 font-semibold text-white break-all">PRM/KA/RERA/1251/308/PR/071123/006380</span>
+          </div>
+
+          <p class="section-copy text-sm mt-4 max-w-md">
+            Premium residential living in an integrated township at Gunjur, Varthur–Sarjapur Road, Bengaluru.
+          </p>
+        </div>
+
+        <div class="md:text-right">
+
+          <div class="eyebrow mb-4">Explore</div>
+
+          <div class="flex flex-wrap md:justify-end gap-x-6 gap-y-3 text-sm text-slate-300">
+            <a href="#overview" class="hover:text-bluebrand-300">Overview</a>
+            <a href="#highlights" class="hover:text-bluebrand-300">Highlights</a>
+            <a href="#masterplan" class="hover:text-bluebrand-300">Master Plan</a>
+            <a href="#amenities" class="hover:text-bluebrand-300">Amenities</a>
+            <a href="#residences" class="hover:text-bluebrand-300">Residences</a>
+            <a href="#location" class="hover:text-bluebrand-300">Location</a>
+            <a href="#enquire" class="hover:text-bluebrand-300">Enquire</a>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Abhee+Celestial+City+Gunjur+Bengaluru"
+            target="_blank"
+            rel="noopener"
+            class="inline-block mt-6 text-sm text-bluebrand-300">
+            View project location
+            <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-slate-500">
+        <span>
+          © <span id="year"></span> ABHEE Celestial City. All rights reserved.
+        </span>
+        <span>
+          Project information and pricing are indicative and subject to confirmation.
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- SHARED ENQUIRY POPUP -->
+  <div id="enquiry-popup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+    <div class="popup-card">
+      <button type="button" class="popup-close" id="popup-close" aria-label="Close popup">&times;</button>
+      <p class="eyebrow mb-2">ABHEE Celestial City</p>
+      <h2 id="popup-title" class="text-2xl font-extrabold text-[#553B2B] mb-2">Enquire Now</h2>
+      <p class="text-sm text-slate-500 mb-5">Enter your details and our team will contact you.</p>
+      <form id="popup-enquiry-form" class="space-y-3">
+        <div>
+          <label for="popup-name" class="block text-xs font-bold mb-1">Name</label>
+          <input id="popup-name" name="name" class="form-control" type="text" placeholder="Your name" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="popup-mobile" class="block text-xs font-bold mb-1">Mobile Number</label>
+          <input id="popup-mobile" name="mobile" class="form-control" type="tel" inputmode="tel" pattern="[0-9+() -]{8,18}" placeholder="Your mobile number" autocomplete="tel" required>
+        </div>
+        <div>
+          <label for="popup-requirement" class="block text-xs font-bold mb-1">Configuration Requirement</label>
+          <select id="popup-requirement" name="configuration_requirement" class="form-control" required>
+            <option value="" disabled selected>Select BHK requirement</option>
+            <option value="2 BHK">2 BHK</option>
+            <option value="3 BHK">3 BHK</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary w-full">Submit</button>
+        <p id="popup-message" class="hidden text-sm rounded-lg p-3 bg-[#FCE9DC] text-[#553B2B]" role="status"></p>
+        <p class="text-[10px] text-slate-400">This front-end form is ready for API/CRM connection. Enquiries are not transmitted until that connection is configured.</p>
+      </form>
+      <a id="brochure-download" class="hidden mt-4 w-full text-center rounded-full bg-[#553B2B] text-white font-bold px-5 py-3" href="./brochure/Celestial City Brochure.pdf" download>
+        <i class="fa-solid fa-download mr-2"></i> Download Brochure
+      </a>
+    </div>
+  </div>
+
+  <!-- FLOATING CONTACT BUTTONS -->
+  <div class="floating-contact" aria-label="Contact options">
+    <a class="floating-whatsapp" href="https://wa.me/918088498367?text=Hello%2C%20I%20am%20interested%20in%20ABHEE%20Celestial%20City.%20Please%20share%20more%20details." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a class="floating-call" href="tel:+918088498367" aria-label="Call ABHEE Celestial City"><i class="fa-solid fa-phone"></i></a>
+  </div>
+
+  <!-- FULL-SCREEN IMAGE VIEWER -->
+  <div
+    id="image-lightbox"
+    class="image-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Full-screen image preview">
+
+    <button
+      class="lightbox-close"
+      id="lightbox-close"
+      aria-label="Close image preview">
+      &times;
+    </button>
+
+    <img id="lightbox-image" src="" alt="Full-screen preview">
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    // Mobile navigation
+    const menuButton = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuButton.addEventListener('click', () => {
+
+      const isOpen = !mobileMenu.classList.contains('hidden');
+
+      mobileMenu.classList.toggle('hidden');
+
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+
+      menuIcon.className = isOpen
+        ? 'fa-solid fa-bars'
+        : 'fa-solid fa-xmark';
+
+    });
+
+    // Close mobile navigation after selecting a link
+    document.querySelectorAll('.mobile-link').forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        mobileMenu.classList.add('hidden');
+
+        menuButton.setAttribute('aria-expanded', 'false');
+
+        menuIcon.className = 'fa-solid fa-bars';
+
+      });
+
+    });
+
+    // Header treatment on scroll
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+
+      navbar.classList.toggle('nav-scrolled', window.scrollY > 30);
+
+    }, { passive: true });
+
+    // Footer year
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+
+
+
+    // Shared compact enquiry popup and brochure unlock.
+    const enquiryPopup = document.getElementById('enquiry-popup');
+    const popupClose = document.getElementById('popup-close');
+    const popupForm = document.getElementById('popup-enquiry-form');
+    const popupMessage = document.getElementById('popup-message');
+    const brochureDownload = document.getElementById('brochure-download');
+
+    function openEnquiryPopup() {
+      enquiryPopup.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      popupMessage.classList.add('hidden');
+      setTimeout(() => document.getElementById('popup-name').focus(), 50);
+    }
+    function closeEnquiryPopup() {
+      enquiryPopup.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.js-open-enquiry').forEach(el => {
+      el.addEventListener('click', event => {
+        event.preventDefault();
+        const downloadLink = document.getElementById('brochure-download');
+        const isFloorPlan = el.dataset.downloadType === 'floor-plan';
+        if (downloadLink) {
+          downloadLink.href = './brochure/Abhee Celestial City Floor Plan.pdf';
+          downloadLink.innerHTML = '<i class="fa-solid fa-download mr-2"></i> Download Floor Plan';
+        }
+        openEnquiryPopup();
+      });
+    });
+    // All Enquire Now links outside the header open the popup. Header behaviour stays unchanged.
+    document.querySelectorAll('a[href="#enquire"]').forEach(link => {
+      if (!link.closest('header')) {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          openEnquiryPopup();
+        });
+      }
+    });
+    document.querySelectorAll('.js-masterplan-enquiry').forEach(img => {
+      img.addEventListener('click', openEnquiryPopup);
+      img.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openEnquiryPopup();
+        }
+      });
+    });
+    popupClose.addEventListener('click', closeEnquiryPopup);
+    enquiryPopup.addEventListener('click', event => {
+      if (event.target === enquiryPopup) closeEnquiryPopup();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && enquiryPopup.classList.contains('active')) closeEnquiryPopup();
+    });
+    popupForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!popupForm.reportValidity()) return;
+      popupMessage.textContent = 'Thank you. Your details have been entered. The requested ABHEE document is now available.';
+      popupMessage.classList.remove('hidden');
+      brochureDownload.classList.remove('hidden');
+      popupForm.querySelector('button[type="submit"]').textContent = 'Submitted';
+      // Front-end only: connect a secure form endpoint before publishing to receive/store leads.
+    });
+    const inlineEnquiryForm = document.getElementById('enquiry-inline-form');
+    const inlineEnquiryMessage = document.getElementById('enquiry-inline-message');
+    inlineEnquiryForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!inlineEnquiryForm.reportValidity()) return;
+      inlineEnquiryMessage.textContent = 'Thank you for your interest. Your details have been entered.';
+      inlineEnquiryMessage.classList.remove('hidden');
+      inlineEnquiryForm.querySelector('button[type="submit"]').textContent = 'Submitted';
+      // Front-end demonstration only. Connect the CRM/form endpoint to receive and store enquiries.
+    });
+
+    // ABHEE Celestial City location advantages. Distances are approximate and supplied for this project.
+    const locationData = {
+      airport: { title: "Key Connectivity & Major Roads", places: [
+        ["State Highway 35 (Varthur–Sarjapur Road)", "Direct access"],
+        ["Dommasandra Circle", "Approx. 1 km"],
+        ["Sarjapur–Varthur Road Junction", "Approx. 2–3 km"],
+        ["Outer Ring Road (ORR)", "Approx. 8 km"],
+        ["Varthur", "Approx. 5–7 km"],
+        ["Whitefield", "Approx. 10–12 km"],
+        ["Marathahalli", "Approx. 12–14 km"],
+        ["Silk Board Junction", "Approx. 18–20 km"],
+        ["Kempegowda International Airport", "Approx. 45–46 km"]
+      ] },
+      it: { title: "IT Parks & Employment Hubs", places: [
+        ["RGA Tech Park", "Approx. 8–9 km"],
+        ["Wipro SEZ, Sarjapur Road", "Approx. 9–12 km"],
+        ["Embassy Tech Village, Bellandur", "Approx. 10–12 km"],
+        ["Prestige Tech Park", "Approx. 8–10 km"],
+        ["Global Technology Park", "Approx. 10–11 km"],
+        ["RMZ Ecospace, Bellandur", "Approx. 12–13 km"],
+        ["Salarpuria Softzone", "Approx. 13–14 km"],
+        ["International Tech Park Bangalore (ITPL), Whitefield", "Approx. 15–17 km"]
+      ] },
+      education: { title: "Schools & Educational Institutions", places: [
+        ["Greenwood High International School", "Approx. 200 metres"],
+        ["Inventure Academy", "Approx. 500 metres"],
+        ["Global Indian International School", "Approx. 600 metres"],
+        ["The International School Bangalore (TISB)", "Approx. 1.3 km"],
+        ["Oakridge International School", "Approx. 2.3 km"],
+        ["Silver Oaks International School", "Approx. 3.4 km"],
+        ["Delhi Public School, Bangalore East", "Approx. 4–7 km"]
+      ] },
+      healthcare: { title: "Hospitals & Healthcare Facilities", places: [
+        ["Sri Lakshmi Multi-Speciality Hospital", "Approx. 2 km"],
+        ["Kshema Hospital", "Approx. 4–5 km"],
+        ["Snehadaan Hospital", "Approx. 5 km"],
+        ["Swastik Hospitals, Dommasandra", "Approx. 5–6 km"],
+        ["Suraksha Hospital", "Approx. 5–6 km"],
+        ["Belenus Champion Hospital", "Approx. 7 km"],
+        ["Manipal Hospital, Varthur", "Approx. 7–8 km"],
+        ["Sakra World Hospital", "Approx. 10 km"]
+      ] },
+      shopping: { title: "Shopping & Daily Needs", places: [
+        ["City Hyper Mart", "Approx. 2 km"],
+        ["D-Mart, Dommasandra", "Approx. 2–6 km"],
+        ["Decathlon, Sarjapur Road", "Approx. 5–7 km"],
+        ["Forum Shantiniketan Mall, Whitefield", "Approx. 17–18 km"],
+        ["Virginia Mall, Whitefield", "Approx. 12–15 km"]
+      ] },
+      lifestyle: { title: "Recreation, Sports & Lifestyle", places: [
+        ["Decathlon, Sarjapur Road", "Approx. 5–7 km"],
+        ["Play Arena, Sarjapur Road", "Approx. 8–10 km"],
+        ["Whitefield dining and entertainment destinations", "Approx. 12–18 km"]
+      ] }
+    };
+
+    const locationTabs = document.querySelectorAll(".location-tab");
+    const locationHeading = document.getElementById("locationHeading");
+    const locationList = document.getElementById("locationList");
+
+    function showLocationCategory(category) {
+
+      const data = locationData[category];
+
+      if (!data || !locationHeading || !locationList) return;
+
+      locationHeading.textContent = data.title;
+
+      locationList.innerHTML = data.places.map(([name, distance]) => `
+        <div class="location-item">
+          <span class="location-name">${name}</span>
+          <span class="location-distance">${distance}</span>
+        </div>
+      `).join("");
+
+      locationTabs.forEach(tab => {
+
+        const active = tab.dataset.category === category;
+
+        tab.classList.toggle("active-tab", active);
+
+        tab.setAttribute("aria-pressed", String(active));
+
+      });
+
+    }
+
+    locationTabs.forEach(tab => {
+
+      tab.addEventListener("click", () => {
+
+        showLocationCategory(tab.dataset.category);
+
+      });
+
+    });
+
+    showLocationCategory("airport");
+
+    // Full-screen image preview for all website images
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    // Add click behaviour to images in the page.
+    // Event delegation also covers images duplicated in the carousel.
+    document.addEventListener('click', event => {
+
+      const image = event.target.closest('main img, footer img');
+
+      if (!image) return;
+      if (image.classList.contains('js-masterplan-enquiry')) return;
+
+      // Do not open images that are still loading or have no source.
+      if (!image.complete || !image.currentSrc) return;
+
+      lightboxImage.src = image.currentSrc;
+      lightboxImage.alt = image.alt || 'Image preview';
+
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+    });
+
+    // Close image preview
+    function closeLightbox() {
+
+      lightbox.classList.remove('active');
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    // Close by clicking the dark background
+    lightbox.addEventListener('click', event => {
+
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', event => {
+
+      if (
+        event.key === 'Escape' &&
+        lightbox.classList.contains('active')
+      ) {
+        closeLightbox();
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
