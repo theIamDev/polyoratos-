@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07152f">
+  <meta name="theme-color" content="#344D39">
 
   <!-- SEO Meta Tags -->
   <title>Embassy Knowledge Park</title>
 
-  <meta name="description" content="Explore Embassy South Reserve at Embassy Origin, formerly known as Embassy Knowledge Park, in North Bengaluru. Discover premium 2, 2.5 and 3 BHK apartments by Embassy Group.">
+  <meta name="description" content="Explore Embassy Knowledge Park in North Bengaluru. Discover premium 2, 2.5, 3 and 3.5 BHK residences by Embassy Group, with thoughtfully planned amenities and convenient connectivity.">
 
   <meta name="robots" content="index, follow, max-image-preview:large">
 
@@ -18,13 +18,13 @@
 
   <!-- Open Graph SEO -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Embassy South Reserve at Embassy Origin">
-  <meta property="og:description" content="Discover premium 2, 2.5 and 3 BHK residences at Embassy South Reserve, Embassy Origin, North Bengaluru.">
+  <meta property="og:title" content="Embassy Knowledge Park | North Bengaluru">
+  <meta property="og:description" content="Discover premium 2, 2.5, 3 and 3.5 BHK residences at Embassy Knowledge Park in North Bengaluru.">
 
   <!-- Twitter SEO -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Embassy South Reserve at Embassy Origin">
-  <meta name="twitter:description" content="Explore premium residences by Embassy Group in North Bengaluru.">
+  <meta name="twitter:title" content="Embassy Knowledge Park | North Bengaluru">
+  <meta name="twitter:description" content="Explore premium residences at Embassy Knowledge Park by Embassy Group in North Bengaluru.">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -471,18 +471,324 @@
       }
     }
 
+    /* White and light-green website scrollbar */
+    html {
+      scrollbar-color: #8FC99A #E9F7E5;
+      scrollbar-width: thin;
+    }
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 10px;
     }
-
     ::-webkit-scrollbar-track {
-      background: #06132b;
+      background: #E9F7E5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #8FC99A;
+      border: 2px solid #E9F7E5;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #25D366;
+    }
+  
+    /* EMBASSY KNOWLEDGE PARK — WHITE & WHATSAPP-INSPIRED LIGHT GREEN THEME */
+    :root {
+      --pure-white: #FFFFFF;
+      --soft-mint: #E9F7E5;
+      --whatsapp-mint: #DCF8C6;
+      --fresh-green: #B7E4A8;
+      --whatsapp-green: #25D366;
+      --forest-green: #315C3B;
+      --deep-green: #244C35;
+      --sage-ink: #263A2C;
+      --sage-muted: #5F7062;
     }
 
-    ::-webkit-scrollbar-thumb {
-      background: #087bb8;
-      border-radius: 8px;
+    body {
+      background: var(--pure-white) !important;
+      color: var(--sage-ink) !important;
     }
+
+    main > section.section-pad:nth-of-type(odd) {
+      background: var(--pure-white) !important;
+      color: var(--sage-ink) !important;
+    }
+
+    main > section.section-pad:nth-of-type(even) {
+      background: var(--soft-mint) !important;
+      color: var(--sage-ink) !important;
+    }
+
+    .section-title, h1, h2, h3, h4 { color: var(--deep-green); }
+    .section-copy { color: var(--sage-muted) !important; }
+    .eyebrow { color: var(--forest-green) !important; }
+
+    .glass, .feature-card, .amenity-card, .location-card, .price-card, .master-card {
+      background: var(--soft-mint) !important;
+      border: 1px solid rgba(49,92,59,.13) !important;
+      color: var(--deep-green) !important;
+      backdrop-filter: none;
+    }
+
+    .glass p, .feature-card p, .amenity-card p, .price-card p {
+      color: var(--sage-muted) !important;
+    }
+
+    /* Keep the header dark as requested, with clear white navigation. */
+    #navbar {
+      background: rgba(36,76,53,.98) !important;
+      border-color: rgba(255,255,255,.14) !important;
+      box-shadow: 0 8px 28px rgba(20,50,30,.16) !important;
+    }
+    #navbar a, #navbar button { color: #FFFFFF !important; }
+    #navbar .btn-primary { color: #FFFFFF !important; }
+    #navbar img { filter: none; }
+    #navbar .mobile-link { color: #FFFFFF !important; }
+    #mobile-menu {
+      background: #244C35 !important;
+      border-color: rgba(255,255,255,.16) !important;
+    }
+    .nav-scrolled {
+      background: rgba(36,76,53,.99) !important;
+      box-shadow: 0 8px 30px rgba(20,50,30,.2) !important;
+    }
+
+    /* Bright WhatsApp green for primary calls to action. */
+    .btn-primary {
+      background: var(--whatsapp-green) !important;
+      color: #FFFFFF !important;
+      border: 1px solid var(--whatsapp-green) !important;
+      box-shadow: 0 5px 14px rgba(37,211,102,.18) !important;
+    }
+    .btn-primary:hover {
+      background: var(--forest-green) !important;
+      border-color: var(--forest-green) !important;
+      color: #FFFFFF !important;
+    }
+    .btn-outline {
+      border-color: var(--forest-green) !important;
+      color: var(--forest-green) !important;
+      background: #FFFFFF !important;
+    }
+    .btn-outline:hover {
+      background: var(--whatsapp-mint) !important;
+    }
+
+    .text-bluebrand-300, .text-bluebrand-400, .text-bluebrand-500 {
+      color: var(--forest-green) !important;
+    }
+    .bg-bluebrand-500\/15 { background: rgba(220,248,198,.72) !important; }
+
+    .location-tab {
+      color: var(--deep-green) !important;
+      border-color: rgba(49,92,59,.2) !important;
+      background: #FFFFFF !important;
+    }
+    .location-tab.active-tab {
+      background: var(--whatsapp-green) !important;
+      color: #FFFFFF !important;
+      border-color: var(--whatsapp-green) !important;
+    }
+    .location-panel {
+      background: #FFFFFF !important;
+      border-color: rgba(49,92,59,.15) !important;
+    }
+    .location-name { color: var(--sage-ink) !important; }
+    .location-distance { color: var(--forest-green) !important; }
+    .location-map-label {
+      background: rgba(233,247,229,.97) !important;
+      border-color: var(--fresh-green) !important;
+    }
+    .location-map-label p { color: var(--deep-green) !important; }
+
+    .form-control { border-color: #C8DDC3; }
+    .form-control:focus {
+      border-color: var(--whatsapp-green);
+      box-shadow: 0 0 0 3px rgba(37,211,102,.16);
+    }
+
+    /* Header and footer share forest green; every footer text element is solid white. */
+    footer {
+      background: #244C35 !important;
+      color: #FFFFFF !important;
+      border-color: rgba(255,255,255,.18) !important;
+    }
+    footer,
+    footer *,
+    footer *::before,
+    footer *::after {
+      color: #FFFFFF !important;
+      opacity: 1 !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      text-shadow: none !important;
+    }
+    footer a:hover {
+      color: #DCF8C6 !important;
+      -webkit-text-fill-color: #DCF8C6 !important;
+    }
+    footer img {
+      height: 5rem !important;
+      max-width: 260px !important;
+      width: auto !important;
+      object-fit: contain !important;
+    }
+
+    /* Natural project imagery with a controlled overlay for white hero text. */
+    .hero-overlay {
+      background:
+        linear-gradient(90deg,rgba(24,54,34,.72) 0%,rgba(24,54,34,.48) 55%,rgba(24,54,34,.18) 100%),
+        linear-gradient(0deg,rgba(24,54,34,.58),rgba(24,54,34,.08) 72%) !important;
+    }
+    #home h1 {
+      color: #FFFFFF !important;
+      text-shadow: 0 3px 22px rgba(0,0,0,.42);
+    }
+    #home h1 span { color: #DCF8C6 !important; }
+    #home p {
+      color: #FFFFFF !important;
+      text-shadow: 0 2px 12px rgba(0,0,0,.4);
+    }
+    #home .glass {
+      background: rgba(36,76,53,.78) !important;
+      border-color: rgba(255,255,255,.28) !important;
+    }
+    #home .glass div { color: #FFFFFF !important; }
+
+    .master-plan-image {
+      filter: blur(2.2px);
+      transform: scale(1.015);
+      transition: filter .25s ease, transform .25s ease;
+      cursor: pointer;
+    }
+    .master-plan-image:hover {
+      filter: blur(1.5px);
+      transform: scale(1.025);
+    }
+
+    .sage-table {
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border-radius:16px;
+      background:#FFFFFF;
+      color:var(--sage-ink);
+    }
+    .sage-table th {
+      background:var(--forest-green);
+      color:#FFFFFF;
+      padding:17px 20px;
+      text-align:left;
+      font-size:13px;
+      letter-spacing:.04em;
+    }
+    .sage-table td {
+      padding:19px 20px;
+      border-bottom:1px solid #E4EFE0;
+      font-size:14px;
+    }
+    .sage-table tr:last-child td { border-bottom:0; }
+    .on-request-link {
+      color:var(--forest-green);
+      font-weight:800;
+      text-decoration:underline;
+      text-underline-offset:4px;
+      cursor:pointer;
+    }
+    .brochure-btn {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:13px 22px;
+      border-radius:999px;
+      background:var(--whatsapp-green);
+      color:#FFFFFF;
+      font-weight:700;
+      margin-top:28px;
+    }
+    .brochure-btn:hover { background:var(--forest-green); }
+
+    .gallery-card {
+      overflow:hidden;
+      border-radius:10px;
+      background:#FFFFFF;
+      box-shadow:0 5px 16px rgba(49,92,59,.08);
+      max-width:100%;
+    }
+    .gallery-card img {
+      width:100%;
+      height:145px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery-card figcaption {
+      padding:8px 10px;
+      color:var(--deep-green);
+      font-weight:700;
+      font-size:11px;
+    }
+
+    .popup-overlay {
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:100000;
+      background:rgba(20,50,30,.62);
+      padding:18px;
+      align-items:center;
+      justify-content:center;
+    }
+    .popup-overlay.active { display:flex; }
+    .popup-card {
+      width:min(100%,390px);
+      background:#FFFFFF;
+      border-radius:20px;
+      padding:25px;
+      color:var(--sage-ink);
+      box-shadow:0 25px 80px rgba(0,0,0,.25);
+      position:relative;
+    }
+    .popup-close {
+      position:absolute;
+      right:15px;
+      top:10px;
+      border:0;
+      background:transparent;
+      font-size:26px;
+      color:var(--forest-green);
+      cursor:pointer;
+    }
+    .floating-contact {
+      position:fixed;
+      right:18px;
+      bottom:22px;
+      z-index:9000;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .floating-contact a {
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#FFFFFF;
+      font-size:22px;
+      box-shadow:0 5px 18px rgba(0,0,0,.18);
+    }
+    .floating-whatsapp { background:#25D366; }
+    .floating-call { background:var(--forest-green); }
+
+    @media(max-width:640px) {
+      .sage-table th, .sage-table td { padding:13px 10px; font-size:12px; }
+      .gallery-card img { height:105px; }
+      .gallery-card figcaption { padding:7px 8px; font-size:10px; }
+      .floating-contact { right:12px; bottom:14px; }
+      .floating-contact a { width:48px; height:48px; }
+    }
+
   </style>
 </head>
 
@@ -531,6 +837,7 @@
             <i id="menu-icon" class="fa-solid fa-bars"></i>
           </button>
         </div>
+
 
       </div>
     </div>
@@ -671,7 +978,7 @@
             </p>
 
             <p class="section-copy mt-4">
-              The residential development offers thoughtfully designed 2, 2.5 and 3 BHK premium apartments, with landscaped open spaces, recreational facilities and lifestyle amenities.
+              The residential development offers thoughtfully designed 2, 2.5, 3 and 3.5 BHK premium apartments, with landscaped open spaces, recreational facilities and lifestyle amenities.
             </p>
 
             <div class="grid grid-cols-2 gap-4 mt-8">
@@ -756,7 +1063,7 @@
           <div class="feature-card glass rounded-2xl p-7">
             <div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-house"></i></div>
             <h3 class="font-bold text-lg mt-5">Premium Residences</h3>
-            <p class="section-copy text-sm mt-3">2, 2.5 and 3 BHK apartment configurations.</p>
+            <p class="section-copy text-sm mt-3">2, 2.5, 3 and 3.5 BHK apartment configurations.</p>
           </div>
 
           <div class="feature-card glass rounded-2xl p-7">
@@ -829,8 +1136,8 @@
               <img
                 src="./images/full-project-master-plan.png"
                 alt="Embassy Knowledge Park full township master plan"
-                class="w-full h-auto object-contain"
-                loading="lazy">
+                class="w-full h-auto object-contain master-plan-image js-masterplan-enquiry"
+                loading="lazy" tabindex="0" role="button" aria-label="Enquire to view master plan">
             </div>
           </div>
 
@@ -847,11 +1154,16 @@
               <img
                 src="./images/apartment-master-plan.png"
                 alt="Embassy Knowledge Park apartment master plan"
-                class="w-full h-auto object-contain"
-                loading="lazy">
+                class="w-full h-auto object-contain master-plan-image js-masterplan-enquiry"
+                loading="lazy" tabindex="0" role="button" aria-label="Enquire to view master plan">
             </div>
           </div>
 
+        </div>
+        <div class="text-center">
+          <button type="button" class="brochure-btn js-open-enquiry">
+            <i class="fa-solid fa-file-pdf"></i> Download Brochure
+          </button>
         </div>
       </div>
     </section>
@@ -1028,83 +1340,46 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-
-          <!-- 2 BHK -->
-          <div class="price-card glass rounded-2xl overflow-hidden">
-            <img
-              src="./images/2bhk-apartments copy.jpeg"
-              alt="2 BHK apartment"
-              class="w-full h-52 object-cover"
-              loading="lazy">
-
-            <div class="p-7">
-              <div class="text-sm text-bluebrand-300 font-bold tracking-widest">2 BHK</div>
-              <div class="text-2xl font-extrabold mt-3">1,330–1,333</div>
-              <p class="text-xs text-slate-400 mt-1">Sq. Ft.</p>
-
-              <div class="border-t border-white/10 mt-6 pt-5">
-                <p class="text-xs text-slate-400">Starting Price</p>
-                <div class="text-2xl font-extrabold text-white mt-2">₹1.99 Cr*</div>
-              </div>
-
-              <a href="#enquire" class="btn-primary w-full mt-6">
-                Enquire Now
-              </a>
-            </div>
-          </div>
-
-          <!-- 2.5 BHK -->
-          <div class="price-card glass rounded-2xl overflow-hidden">
-            <img
-              src="./images/2.5-apartment.jpeg"
-              alt="2.5 BHK apartment"
-              class="w-full h-52 object-cover"
-              loading="lazy">
-
-            <div class="p-7">
-              <div class="text-sm text-bluebrand-300 font-bold tracking-widest">2.5 BHK</div>
-              <div class="text-2xl font-extrabold mt-3">1,598</div>
-              <p class="text-xs text-slate-400 mt-1">Sq. Ft.</p>
-
-              <div class="border-t border-white/10 mt-6 pt-5">
-                <p class="text-xs text-slate-400">Starting Price</p>
-                <div class="text-2xl font-extrabold text-white mt-2">₹2.37 Cr*</div>
-              </div>
-
-              <a href="#enquire" class="btn-primary w-full mt-6">
-                Enquire Now
-              </a>
-            </div>
-          </div>
-
-          <!-- 3 BHK -->
-          <div class="price-card glass rounded-2xl overflow-hidden">
-            <img
-              src="./images/3bhk-apartment.png"
-              alt="3 BHK apartment"
-              class="w-full h-52 object-cover"
-              loading="lazy">
-
-            <div class="p-7">
-              <div class="text-sm text-bluebrand-300 font-bold tracking-widest">3 BHK</div>
-              <div class="text-2xl font-extrabold mt-3">1,896–1,923</div>
-              <p class="text-xs text-slate-400 mt-1">Sq. Ft.</p>
-
-              <div class="border-t border-white/10 mt-6 pt-5">
-                <p class="text-xs text-slate-400">Starting Price</p>
-                <div class="text-2xl font-extrabold text-white mt-2">₹2.87 Cr*</div>
-              </div>
-
-              <a href="#enquire" class="btn-primary w-full mt-6">
-                Enquire Now
-              </a>
-            </div>
-          </div>
-
+        <div class="overflow-x-auto rounded-2xl shadow-sm">
+          <table class="sage-table">
+            <thead>
+              <tr>
+                <th>Unit Type</th>
+                <th>Size (sq. ft.)</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>2 BHK</strong></td>
+                <td>1,330–1,333</td>
+                <td><strong>₹1.99 Cr*</strong></td>
+              </tr>
+              <tr>
+                <td><strong>2.5 BHK</strong></td>
+                <td>1,598</td>
+                <td><a href="#" class="on-request-link js-open-enquiry">On Request</a></td>
+              </tr>
+              <tr>
+                <td><strong>3 BHK</strong></td>
+                <td>1,896–1,923</td>
+                <td><a href="#" class="on-request-link js-open-enquiry">On Request</a></td>
+              </tr>
+              <tr>
+                <td><strong>3.5 BHK</strong></td>
+                <td>2,200</td>
+                <td><a href="#" class="on-request-link js-open-enquiry">On Request</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-center">
+          <button type="button" class="brochure-btn js-open-enquiry" data-download-type="floor-plan">
+            <i class="fa-solid fa-file-pdf"></i> Download Floor Plan
+          </button>
         </div>
 
-        <p class="text-xs text-slate-500 mt-7 text-center">
+        <p class="text-xs text-slate-500 mt-5 text-center">
           *Prices are indicative and subject to confirmation. Please contact the sales team for the latest details.
         </p>
 
@@ -1236,93 +1511,59 @@
             </div>
           </div>
 
-          <div class="bg-white rounded-3xl p-6 sm:p-9 text-[#10213b] shadow-2xl">
-
-            <h3 class="text-2xl font-extrabold">Request a Callback</h3>
-
-            <p class="text-sm text-slate-500 mt-2 mb-7">
-              Fill in your details and our team can get in touch.
-            </p>
-
-            <form id="enquiry-form" class="space-y-4">
-
+          <div class="bg-white rounded-3xl p-7 sm:p-9 text-[#26382B] shadow-xl border border-[#D6E5CE]">
+            <h3 class="text-2xl font-extrabold text-[#344D39]">Request a Callback</h3>
+            <p class="text-sm text-[#647568] mt-2 mb-6">Enter your details and our sales team can contact you.</p>
+            <form id="enquiry-inline-form" class="space-y-4">
               <div>
-                <label for="name" class="block text-xs font-bold mb-2">
-                  Full Name *
-                </label>
-                <input
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Enter your name"
-                  required>
+                <label for="enquiry-inline-name" class="block text-sm font-bold text-[#344D39] mb-2">Name</label>
+                <input id="enquiry-inline-name" name="name" type="text" autocomplete="name" placeholder="Enter your name" required class="form-control w-full rounded-xl border px-4 py-3 text-[#26382B]">
               </div>
-
               <div>
-                <label for="phone" class="block text-xs font-bold mb-2">
-                  Mobile Number *
-                </label>
-                <input
-                  class="form-control"
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  inputmode="numeric"
-                  pattern="[0-9+() -]{8,18}"
-                  placeholder="Enter your mobile number"
-                  required>
+                <label for="enquiry-inline-mobile" class="block text-sm font-bold text-[#344D39] mb-2">Mobile Number</label>
+                <input id="enquiry-inline-mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+() -]{8,18}" placeholder="Enter your mobile number" required class="form-control w-full rounded-xl border px-4 py-3 text-[#26382B]">
               </div>
-
               <div>
-                <label for="email" class="block text-xs font-bold mb-2">
-                  Email Address
-                </label>
-                <input
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email">
-              </div>
-
-              <div>
-                <label for="configuration" class="block text-xs font-bold mb-2">
-                  Preferred Configuration
-                </label>
-
-                <select class="form-control" id="configuration" name="configuration">
-                  <option value="">Select configuration</option>
-                  <option>2 BHK</option>
-                  <option>2.5 BHK</option>
-                  <option>3 BHK</option>
+                <label for="enquiry-inline-requirement" class="block text-sm font-bold text-[#344D39] mb-2">Configuration Requirement</label>
+                <select id="enquiry-inline-requirement" name="configuration_requirement" required class="form-control w-full rounded-xl border px-4 py-3 text-[#26382B]">
+                  <option value="" disabled selected>Select BHK requirement</option>
+                  <option value="2 BHK">2 BHK</option>
+                  <option value="2.5 BHK">2.5 BHK</option>
+                  <option value="3 BHK">3 BHK</option>
+                  <option value="3.5 BHK">3.5 BHK</option>
                 </select>
               </div>
-
-              <label class="flex items-start gap-3 text-xs text-slate-500 leading-relaxed">
-                <input type="checkbox" required class="mt-1 accent-sky-600">
-                <span>
-                  I agree to be contacted regarding this enquiry. Please refer to the applicable privacy policy.
-                </span>
-              </label>
-
-              <button type="submit" class="btn-primary w-full">
-                Submit Enquiry <i class="fa-solid fa-arrow-right"></i>
-              </button>
-
-              <p
-                id="form-message"
-                class="hidden text-sm rounded-lg p-3 bg-sky-50 text-sky-900"
-                role="status">
-              </p>
-
-              <p class="text-[11px] text-slate-400">
-                Demo form: this page does not send information to a CRM or server. Connect a form endpoint before publishing to collect enquiries.
-              </p>
-
+              <button type="submit" class="btn-primary w-full justify-center">Book a site visit <i class="fa-solid fa-arrow-right"></i></button>
+              <p id="enquiry-inline-message" class="hidden rounded-lg bg-[#D6E5CE] p-3 text-sm font-semibold text-[#344D39]" role="status"></p>
             </form>
+            <a href="tel:+919380335089" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#344D39] px-5 py-3 font-bold text-[#344D39]">
+              <i class="fa-solid fa-phone"></i> Call Us: +91 93803 35089
+            </a>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section-pad" style="background:#FAFAF5">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="eyebrow mb-4">Project Gallery</div>
+          <h2 class="section-title">A closer look at <span style="color:#344D39">your future home.</span></h2>
+          <p class="section-copy mt-4">Explore selected spaces and lifestyle visuals from Embassy Knowledge Park.</p>
+        </div>
+        <div class="grid grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
+          <figure class="gallery-card"><img src="./images/ekp-ariel-view-v2.png" alt="Embassy Knowledge Park aerial view" loading="lazy"><figcaption>Project Overview</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-tower-view.png" alt="Residential tower view" loading="lazy"><figcaption>Residential Towers</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-clubhouse.png" alt="Clubhouse" loading="lazy"><figcaption>Clubhouse</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-balcony-view.png" alt="Balcony View" loading="lazy"><figcaption>Balcony View</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-fitness-center.png" alt="Fitness centre" loading="lazy"><figcaption>Fitness Centre</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-apartment-view.png" alt="Tower & Landscape" loading="lazy"><figcaption>Tower & Landscape</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/children-play-area.png" alt="Sports Court" loading="lazy"><figcaption>Sports Court</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/rooftop-view.png" alt="Rooftop lifestyle" loading="lazy"><figcaption>Rooftop Lifestyle</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/sitout-view.png" alt="Relaxation sit-out" loading="lazy"><figcaption>Relaxation Spaces</figcaption></figure>
         </div>
       </div>
     </section>
@@ -1341,12 +1582,13 @@
           <img
             src="./images/footer-embassy-logo-white.png"
             alt="Embassy Group Logo"
-            class="h-14 w-auto max-w-[200px] object-contain"
+            class="h-20 w-auto max-w-[260px] object-contain"
             loading="lazy">
 
-          <p class="text-[9px] font-semibold tracking-[.18em] text-bluebrand-300 mt-2">
-            AUTHORIZED CHANNEL PARTNER
-          </p>
+          <div class="mt-4 text-xs text-slate-300">
+            <span class="block uppercase tracking-wider text-slate-400">RERA Registration Number</span>
+            <span class="block mt-1 font-semibold text-white break-all">PRM/KA/RERA/1251/309/PR/090926/008925</span>
+          </div>
 
           <p class="section-copy text-sm mt-4 max-w-md">
             Premium residential living in an integrated township at Tharahunise, North Bengaluru.
@@ -1382,7 +1624,7 @@
 
       <div class="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-slate-500">
         <span>
-          © <span id="year"></span> EHE INDUSTRIES PVT. LTD. All rights reserved.
+          © <span id="year"></span> Embassy Knowledge Park. All rights reserved.
         </span>
         <span>
           Project information and pricing are indicative and subject to confirmation.
@@ -1391,6 +1633,49 @@
 
     </div>
   </footer>
+
+
+  <!-- SHARED ENQUIRY POPUP -->
+  <div id="enquiry-popup" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+    <div class="popup-card">
+      <button type="button" class="popup-close" id="popup-close" aria-label="Close popup">&times;</button>
+      <p class="eyebrow mb-2">Embassy Knowledge Park</p>
+      <h2 id="popup-title" class="text-2xl font-extrabold text-[#344D39] mb-2">Enquire Now</h2>
+      <p class="text-sm text-slate-500 mb-5">Enter your details and our team will contact you.</p>
+      <form id="popup-enquiry-form" class="space-y-3">
+        <div>
+          <label for="popup-name" class="block text-xs font-bold mb-1">Name</label>
+          <input id="popup-name" name="name" class="form-control" type="text" placeholder="Your name" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="popup-mobile" class="block text-xs font-bold mb-1">Mobile Number</label>
+          <input id="popup-mobile" name="mobile" class="form-control" type="tel" inputmode="tel" pattern="[0-9+() -]{8,18}" placeholder="Your mobile number" autocomplete="tel" required>
+        </div>
+        <div>
+          <label for="popup-requirement" class="block text-xs font-bold mb-1">Configuration Requirement</label>
+          <select id="popup-requirement" name="configuration_requirement" class="form-control" required>
+            <option value="" disabled selected>Select BHK requirement</option>
+            <option value="2 BHK">2 BHK</option>
+            <option value="2.5 BHK">2.5 BHK</option>
+            <option value="3 BHK">3 BHK</option>
+            <option value="3.5 BHK">3.5 BHK</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary w-full">Submit</button>
+        <p id="popup-message" class="hidden text-sm rounded-lg p-3 bg-[#D6E5CE] text-[#344D39]" role="status"></p>
+        <p class="text-[10px] text-slate-400">This front-end form is ready for API/CRM connection. Enquiries are not transmitted until that connection is configured.</p>
+      </form>
+      <a id="brochure-download" class="hidden mt-4 w-full text-center rounded-full bg-[#344D39] text-white font-bold px-5 py-3" href="./brochure/Embassy Knowledge Park - Brochure.pdf" download>
+        <i class="fa-solid fa-download mr-2"></i> Download Brochure
+      </a>
+    </div>
+  </div>
+
+  <!-- FLOATING CONTACT BUTTONS -->
+  <div class="floating-contact" aria-label="Contact options">
+    <a class="floating-whatsapp" href="https://wa.me/919380335089?text=Hello%2C%20I%20am%20interested%20in%20Embassy%20South%20Reserve.%20Please%20share%20more%20details." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a class="floating-call" href="tel:+919380335089" aria-label="Call Embassy Knowledge Park"><i class="fa-solid fa-phone"></i></a>
+  </div>
 
   <!-- FULL-SCREEN IMAGE VIEWER -->
   <div
@@ -1461,19 +1746,84 @@
     document.getElementById('year').textContent =
       new Date().getFullYear();
 
-    // Demo enquiry interaction
-    // No data is transmitted or stored.
-    document.getElementById('enquiry-form').addEventListener('submit', event => {
 
+
+    // Shared compact enquiry popup and brochure unlock.
+    const enquiryPopup = document.getElementById('enquiry-popup');
+    const popupClose = document.getElementById('popup-close');
+    const popupForm = document.getElementById('popup-enquiry-form');
+    const popupMessage = document.getElementById('popup-message');
+    const brochureDownload = document.getElementById('brochure-download');
+
+    function openEnquiryPopup() {
+      enquiryPopup.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      popupMessage.classList.add('hidden');
+      setTimeout(() => document.getElementById('popup-name').focus(), 50);
+    }
+    function closeEnquiryPopup() {
+      enquiryPopup.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.js-open-enquiry').forEach(el => {
+      el.addEventListener('click', event => {
+        event.preventDefault();
+        const downloadLink = document.getElementById('brochure-download');
+        const isFloorPlan = el.dataset.downloadType === 'floor-plan';
+        if (downloadLink) {
+          downloadLink.href = isFloorPlan
+            ? './brochure/EKP-Floor-Plan.pdf'
+            : './brochure/Embassy Knowledge Park - Brochure.pdf';
+          downloadLink.innerHTML = isFloorPlan
+            ? '<i class="fa-solid fa-download mr-2"></i> Download Floor Plan'
+            : '<i class="fa-solid fa-download mr-2"></i> Download Brochure';
+        }
+        openEnquiryPopup();
+      });
+    });
+    // All Enquire Now links outside the header open the popup. Header behaviour stays unchanged.
+    document.querySelectorAll('a[href="#enquire"]').forEach(link => {
+      if (!link.closest('header')) {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          openEnquiryPopup();
+        });
+      }
+    });
+    document.querySelectorAll('.js-masterplan-enquiry').forEach(img => {
+      img.addEventListener('click', openEnquiryPopup);
+      img.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openEnquiryPopup();
+        }
+      });
+    });
+    popupClose.addEventListener('click', closeEnquiryPopup);
+    enquiryPopup.addEventListener('click', event => {
+      if (event.target === enquiryPopup) closeEnquiryPopup();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && enquiryPopup.classList.contains('active')) closeEnquiryPopup();
+    });
+    popupForm.addEventListener('submit', event => {
       event.preventDefault();
-
-      const message = document.getElementById('form-message');
-
-      message.textContent =
-        'Thank you. The form is currently a front-end demo and has not sent your details. Connect your enquiry endpoint to receive submissions.';
-
-      message.classList.remove('hidden');
-
+      if (!popupForm.reportValidity()) return;
+      popupMessage.textContent = 'Thank you. Your details have been entered. Brochure access is now available.';
+      popupMessage.classList.remove('hidden');
+      brochureDownload.classList.remove('hidden');
+      popupForm.querySelector('button[type="submit"]').textContent = 'Submitted';
+      // Front-end only: connect a secure form endpoint before publishing to receive/store leads.
+    });
+    const inlineEnquiryForm = document.getElementById('enquiry-inline-form');
+    const inlineEnquiryMessage = document.getElementById('enquiry-inline-message');
+    inlineEnquiryForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!inlineEnquiryForm.reportValidity()) return;
+      inlineEnquiryMessage.textContent = 'Thank you for your interest. Your details have been entered.';
+      inlineEnquiryMessage.classList.remove('hidden');
+      inlineEnquiryForm.querySelector('button[type="submit"]').textContent = 'Submitted';
+      // Front-end demonstration only. Connect the CRM/form endpoint to receive and store enquiries.
     });
 
     // Interactive Location Advantages
@@ -1609,6 +1959,7 @@
       const image = event.target.closest('main img, footer img');
 
       if (!image) return;
+      if (image.classList.contains('js-masterplan-enquiry')) return;
 
       // Do not open images that are still loading or have no source.
       if (!image.complete || !image.currentSrc) return;
