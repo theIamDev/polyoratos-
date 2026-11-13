@@ -15,7 +15,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
 
   <!-- ABHEE Favicon -->
-  <link rel="icon" type="image/png" href="./images/abhee-ventures-logo-white.png">
+  <link rel="icon" type="image/png" href="./images/abhee-favicon.png">
 
   <!-- Open Graph SEO -->
   <meta property="og:type" content="website">
@@ -28,43 +28,7 @@
   <meta name="twitter:title" content="ABHEE Celestial City | Gunjur, Bengaluru">
   <meta name="twitter:description" content="Explore ready-to-move 2 & 3 BHK homes at ABHEE Celestial City, Gunjur.">
   <meta name="twitter:image" content="./images/gallery-01.webp">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: {
-              800: '#10264d',
-              900: '#091b3a',
-              950: '#06132b'
-            },
-            bluebrand: {
-              300: '#75d9ff',
-              400: '#36c5f4',
-              500: '#079bd3',
-              600: '#087bb8',
-              700: '#07558f'
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- Fonts and Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="stylesheet" href="./css/tailwind.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -75,7 +39,7 @@
     }
 
     body {
-      font-family: Inter, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #FFFFFF;
       color: #553B2B;
     }
@@ -114,6 +78,12 @@
       background:
         linear-gradient(90deg,rgba(4,13,31,.84) 0%,rgba(4,13,31,.5) 52%,rgba(4,13,31,.12) 100%),
         linear-gradient(0deg,rgba(4,13,31,.72),transparent 50%);
+    }
+
+    .hero-picture {
+      position: absolute;
+      inset: 0;
+      display: block;
     }
 
     .hero-video {
@@ -793,6 +763,7 @@
     }
 
   </style>
+  <link rel="preload" as="image" href="./images/hero-1280.avif" type="image/avif" fetchpriority="high" imagesrcset="./images/hero-640.avif 640w, ./images/hero-960.avif 960w, ./images/hero-1280.avif 1280w" imagesizes="100vw">
 </head>
 
 <body class="antialiased selection:bg-bluebrand-500 selection:text-white">
@@ -804,7 +775,7 @@
       <div class="h-[76px] flex items-center justify-between gap-5">
 
         <a href="#home" class="flex items-center shrink-0" aria-label="ABHEE Celestial City home">
-          <img
+          <img decoding="async" loading="lazy" width="118" height="127"
             src="./images/abhee-ventures-logo-white.png"
             alt="ABHEE Ventures"
             class="h-11 md:h-12 w-auto max-w-[190px] object-contain"
@@ -829,7 +800,7 @@
 
         <div class="flex items-center gap-3">
           <a href="#enquire" class="hidden sm:inline-flex btn-primary !py-3 !px-5 text-xs">
-            Enquire Now <i class="fa-solid fa-arrow-right"></i>
+            Enquire Now <svg class="inline-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
           </a>
 
           <button
@@ -837,7 +808,7 @@
             class="lg:hidden w-10 h-10 rounded-lg border border-white/15 text-white"
             aria-label="Open navigation"
             aria-expanded="false">
-            <i id="menu-icon" class="fa-solid fa-bars"></i>
+            <svg id="menu-icon" class="inline-icon menu-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
           </button>
         </div>
 
@@ -862,13 +833,15 @@
     <section id="home" class="relative min-h-[780px] h-[100svh] max-h-[1050px] flex items-end md:items-center overflow-hidden">
 
       
-<img
-  class="hero-video"
-  src="./images/abhee-front-gate-viewt.jpg"
-  alt="ABHEE Celestial City residential project"
-  fetchpriority="high"
-  loading="eager"
-  decoding="async">
+<picture class="hero-picture">
+  <source type="image/avif" srcset="./images/hero-640.avif 640w, ./images/hero-960.avif 960w, ./images/hero-1280.avif 1280w" sizes="100vw">
+  <img width="1280" height="720"
+    class="hero-video"
+    src="./images/abhee-front-gate-viewt.webp"
+    alt="ABHEE Celestial City residential project"
+    fetchpriority="high"
+    loading="eager">
+</picture>
 
       
 
@@ -901,7 +874,7 @@
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
             <a href="#residences" class="btn-primary">
-              Explore Residences <i class="fa-solid fa-arrow-right"></i>
+              Explore Residences <svg class="inline-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
             </a>
             <a href="#amenities" class="btn-outline">
               Discover Amenities
@@ -949,7 +922,7 @@
           <div class="relative">
 
             <div class="image-frame relative z-10">
-              <img
+              <img decoding="async" width="1254" height="1254"
                 src="./images/gallery-01.webp"
                 alt="ABHEE Celestial City residential towers"
                 class="w-full h-[360px] sm:h-[520px] object-cover"
@@ -1025,7 +998,7 @@
           </div>
 
           <div class="image-frame">
-            <img
+            <img decoding="async" width="1672" height="941"
               src="./images/galllery-02.webp"
               alt="ABHEE Celestial City development"
               class="w-full h-[340px] sm:h-[440px] object-cover"
@@ -1045,14 +1018,14 @@
           <p class="section-copy mt-5">A ready-to-move residential community in Gunjur, East Bengaluru.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-building"></i></div><h3 class="font-bold text-lg mt-5">Approx. 5 Acres</h3><p class="section-copy text-sm mt-3">Residential development in Gunjur.</p></div>
-          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-house"></i></div><h3 class="font-bold text-lg mt-5">2 & 3 BHK Homes</h3><p class="section-copy text-sm mt-3">Thoughtfully planned apartment configurations.</p></div>
-          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-tree"></i></div><h3 class="font-bold text-lg mt-5">73% Open Space</h3><p class="section-copy text-sm mt-3">More room for open-air moments.</p></div>
-          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-people-roof"></i></div><h3 class="font-bold text-lg mt-5">25,000 Sq. Ft.</h3><p class="section-copy text-sm mt-3">Clubhouse for leisure and community activities.</p></div>
-          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-city"></i></div><h3 class="font-bold text-lg mt-5">3 Towers</h3><p class="section-copy text-sm mt-3">2 basements + ground + 26 upper floors.</p></div>
-          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-person-running"></i></div><h3 class="font-bold text-lg mt-5">35+ Amenities</h3><p class="section-copy text-sm mt-3">Spaces for fitness, recreation and wellness.</p></div>
-          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-key"></i></div><h3 class="font-bold text-lg mt-5">Ready to Move</h3><p class="section-copy text-sm mt-3">Homes ready for immediate occupancy.</p></div>
-          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><i class="fa-solid fa-location-dot"></i></div><h3 class="font-bold text-lg mt-5">Gunjur</h3><p class="section-copy text-sm mt-3">Varthur–Sarjapur Road, East Bengaluru.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><svg class="inline-icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM80 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM272 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg></div><h3 class="font-bold text-lg mt-5">Approx. 5 Acres</h3><p class="section-copy text-sm mt-3">Residential development in Gunjur.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><svg class="inline-icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg></div><h3 class="font-bold text-lg mt-5">2 & 3 BHK Homes</h3><p class="section-copy text-sm mt-3">Thoughtfully planned apartment configurations.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><svg class="inline-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M210.6 5.9L62 169.4c-3.9 4.2-6 9.8-6 15.5C56 197.7 66.3 208 79.1 208l24.9 0L30.6 281.4c-4.2 4.2-6.6 10-6.6 16C24 309.9 34.1 320 46.6 320L80 320 5.4 409.5C1.9 413.7 0 419 0 424.5c0 13 10.5 23.5 23.5 23.5L192 448l0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32 168.5 0c13 0 23.5-10.5 23.5-23.5c0-5.5-1.9-10.8-5.4-15L368 320l33.4 0c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L344 208l24.9 0c12.7 0 23.1-10.3 23.1-23.1c0-5.7-2.1-11.3-6-15.5L237.4 5.9C234 2.1 229.1 0 224 0s-10 2.1-13.4 5.9z"/></svg></div><h3 class="font-bold text-lg mt-5">73% Open Space</h3><p class="section-copy text-sm mt-3">More room for open-air moments.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><svg class="inline-icon" viewBox="0 0 640 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M335.5 4l288 160c15.4 8.6 21 28.1 12.4 43.5s-28.1 21-43.5 12.4L320 68.6 47.5 220c-15.4 8.6-34.9 3-43.5-12.4s-3-34.9 12.4-43.5L304.5 4c9.7-5.4 21.4-5.4 31.1 0zM320 160a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM144 256a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm312 40a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM226.9 491.4L200 441.5l0 38.5c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-38.5L61.1 491.4c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l37.9-70.3c15.3-28.5 45.1-46.3 77.5-46.3l19.5 0c16.3 0 31.9 4.5 45.4 12.6l33.6-62.3c15.3-28.5 45.1-46.3 77.5-46.3l19.5 0c32.4 0 62.1 17.8 77.5 46.3l33.6 62.3c13.5-8.1 29.1-12.6 45.4-12.6l19.5 0c32.4 0 62.1 17.8 77.5 46.3l37.9 70.3c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8L552 441.5l0 38.5c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-38.5-26.9 49.9c-6.3 11.7-20.8 16-32.5 9.8s-16-20.8-9.8-32.5l36.3-67.5c-1.7-1.7-3.2-3.6-4.3-5.8L376 345.5l0 54.5c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-54.5-26.9 49.9c-1.2 2.2-2.6 4.1-4.3 5.8l36.3 67.5c6.3 11.7 1.9 26.2-9.8 32.5s-26.2 1.9-32.5-9.8z"/></svg></div><h3 class="font-bold text-lg mt-5">25,000 Sq. Ft.</h3><p class="section-copy text-sm mt-3">Clubhouse for leisure and community activities.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><svg class="inline-icon" viewBox="0 0 640 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M480 48c0-26.5-21.5-48-48-48L336 0c-26.5 0-48 21.5-48 48l0 48-64 0 0-72c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 72-64 0 0-72c0-13.3-10.7-24-24-24S64 10.7 64 24l0 72L48 96C21.5 96 0 117.5 0 144l0 96L0 464c0 26.5 21.5 48 48 48l256 0 32 0 96 0 160 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48l-112 0 0-144zm96 320l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM240 416l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16zM128 400c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32zM560 256c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zM256 176l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM112 160c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zM256 304c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32zM112 320l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16zm304-48l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM400 64c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zm16 112l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16z"/></svg></div><h3 class="font-bold text-lg mt-5">3 Towers</h3><p class="section-copy text-sm mt-3">2 basements + ground + 26 upper floors.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><svg class="inline-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M320 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM125.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L137.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L238 299l30.9-82.4 5.1 12.3C289 264.7 323.9 288 362.7 288l21.3 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-21.3 0c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L57.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM91.2 352L32 352c-17.7 0-32 14.3-32 32s14.3 32 32 32l69.6 0c19 0 36.2-11.2 43.9-28.5L157 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L91.2 352z"/></svg></div><h3 class="font-bold text-lg mt-5">35+ Amenities</h3><p class="section-copy text-sm mt-3">Spaces for fitness, recreation and wellness.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17l0 80c0 13.3 10.7 24 24 24l80 0c13.3 0 24-10.7 24-24l0-40 40 0c13.3 0 24-10.7 24-24l0-40 40 0c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg></div><h3 class="font-bold text-lg mt-5">Ready to Move</h3><p class="section-copy text-sm mt-3">Homes ready for immediate occupancy.</p></div>
+          <div class="feature-card glass rounded-2xl p-7"><div class="text-bluebrand-300 text-3xl"><svg class="inline-icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></div><h3 class="font-bold text-lg mt-5">Gunjur</h3><p class="section-copy text-sm mt-3">Varthur–Sarjapur Road, East Bengaluru.</p></div>
         </div>
       </div>
     </section>
@@ -1067,9 +1040,9 @@
         </div>
         <div class="master-card glass rounded-2xl overflow-hidden max-w-5xl mx-auto">
           <div class="p-6 sm:p-7"><div class="eyebrow mb-3">ABHEE Celestial City</div><h3 class="text-xl sm:text-2xl font-bold">Project Master Plan</h3><p class="section-copy text-sm mt-3">Project layout supplied for ABHEE Celestial City.</p></div>
-          <div class="bg-white p-3 sm:p-5"><img src="./images/abhee-cc-master-plan.webp" alt="ABHEE Celestial City project master plan" class="w-full h-auto object-contain master-plan-image js-masterplan-enquiry" loading="lazy" tabindex="0" role="button" aria-label="Enquire to view ABHEE Celestial City master plan"></div>
+          <div class="bg-white p-3 sm:p-5"><img decoding="async" width="1518" height="1036" src="./images/abhee-cc-master-plan.webp" alt="ABHEE Celestial City project master plan" class="w-full h-auto object-contain master-plan-image js-masterplan-enquiry" loading="lazy" tabindex="0" role="button" aria-label="Enquire to view ABHEE Celestial City master plan"></div>
         </div>
-        <div class="text-center mt-7"><button type="button" class="brochure-btn js-open-enquiry"><i class="fa-solid fa-file-pdf"></i> Download Brochure</button></div>
+        <div class="text-center mt-7"><button type="button" class="brochure-btn js-open-enquiry"><svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"/></svg> Download Brochure</button></div>
       </div>
     </section>
 
@@ -1098,39 +1071,39 @@
 
         <div class="amenities-marquee">
           <div class="amenities-track">
-            <div class="amenity-image-card"><img src="./images/amenities.webp" alt="ABHEE Celestial City lifestyle amenities" loading="lazy"><div class="amenity-image-label">Lifestyle Amenities</div></div>
-            <div class="amenity-image-card"><img src="./images/amenities-Play-Ground2.webp" alt="ABHEE Celestial City residential spaces" loading="lazy"><div class="amenity-image-label">Residential Spaces</div></div>
-            <div class="amenity-image-card"><img src="./images/pool-courtyard.webp" alt="ABHEE Celestial City landscaped spaces" loading="lazy"><div class="amenity-image-label">Landscaped Spaces</div></div>
-            <div class="amenity-image-card"><img src="./images/abhee-front-gate-viewt.jpg" alt="ABHEE Celestial City community spaces" loading="lazy"><div class="amenity-image-label">Community Spaces</div></div>
-            <div class="amenity-image-card" ><img src="./images/abhee-cc-garden.webp" alt="" loading="lazy"><div class="amenity-image-label">Lifestyle Amenities</div></div>
+            <div class="amenity-image-card"><img decoding="async" width="1672" height="941" src="./images/amenities.webp" alt="ABHEE Celestial City lifestyle amenities" loading="lazy"><div class="amenity-image-label">Lifestyle Amenities</div></div>
+            <div class="amenity-image-card"><img decoding="async" width="2048" height="1152" src="./images/amenities-Play-Ground2.webp" alt="ABHEE Celestial City residential spaces" loading="lazy"><div class="amenity-image-label">Residential Spaces</div></div>
+            <div class="amenity-image-card"><img decoding="async" width="3840" height="2560" src="./images/pool-courtyard.webp" alt="ABHEE Celestial City landscaped spaces" loading="lazy"><div class="amenity-image-label">Landscaped Spaces</div></div>
+            <div class="amenity-image-card"><img decoding="async" width="1280" height="720" src="./images/abhee-front-gate-viewt.webp" alt="ABHEE Celestial City community spaces" loading="lazy"><div class="amenity-image-label">Community Spaces</div></div>
+            <div class="amenity-image-card" ><img decoding="async" width="3840" height="2160" src="./images/abhee-cc-garden.webp" alt="" loading="lazy"><div class="amenity-image-label">Lifestyle Amenities</div></div>
             
-            <div class="amenity-image-card" aria-hidden="true"><img src="./images/pool-courtyard.webp" alt="" loading="lazy"><div class="amenity-image-label">Landscaped Spaces</div></div>
-            <div class="amenity-image-card" aria-hidden="true"><img src="./images/abhee-cc-garden.webp" alt="" loading="lazy"><div class="amenity-image-label">Community Spaces</div></div>
+            <div class="amenity-image-card" aria-hidden="true"><img decoding="async" width="3840" height="2560" src="./images/pool-courtyard.webp" alt="" loading="lazy"><div class="amenity-image-label">Landscaped Spaces</div></div>
+            <div class="amenity-image-card" aria-hidden="true"><img decoding="async" width="3840" height="2160" src="./images/abhee-cc-garden.webp" alt="" loading="lazy"><div class="amenity-image-label">Community Spaces</div></div>
           </div>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
 
           <div class="amenity-card glass rounded-xl p-5">
-            <i class="fa-solid fa-water text-2xl text-bluebrand-300"></i>
+            <svg class="inline-icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M269.5 69.9c11.1-7.9 25.9-7.9 37 0C329 85.4 356.5 96 384 96c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 149.7 417 160 384 160c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4C42.8 92.6 61 83.5 75.3 71.6c11.1-9.5 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 85.2 165.1 96 192 96c27.5 0 55-10.6 77.5-26.1zm37 288C329 373.4 356.5 384 384 384c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 437.7 417 448 384 448c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.4 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 373.2 165.1 384 192 384c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0zm0-144C329 229.4 356.5 240 384 240c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 293.7 417 304 384 304c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.5 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 229.2 165.1 240 192 240c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0z"/></svg>
             <h3 class="font-bold mt-4">Swimming Pool</h3>
             <p class="section-copy text-sm mt-2">A place to unwind and refresh.</p>
           </div>
 
           <div class="amenity-card glass rounded-xl p-5">
-            <i class="fa-solid fa-spa text-2xl text-bluebrand-300"></i>
+            <svg class="inline-icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M183.1 235.3c33.7 20.7 62.9 48.1 85.8 80.5c7 9.9 13.4 20.3 19.1 31c5.7-10.8 12.1-21.1 19.1-31c22.9-32.4 52.1-59.8 85.8-80.5C437.6 207.8 490.1 192 546 192l9.9 0c11.1 0 20.1 9 20.1 20.1C576 360.1 456.1 480 308.1 480L288 480l-20.1 0C119.9 480 0 360.1 0 212.1C0 201 9 192 20.1 192l9.9 0c55.9 0 108.4 15.8 153.1 43.3zM301.5 37.6c15.7 16.9 61.1 71.8 84.4 164.6c-38 21.6-71.4 50.8-97.9 85.6c-26.5-34.8-59.9-63.9-97.9-85.6c23.2-92.8 68.6-147.7 84.4-164.6C278 33.9 282.9 32 288 32s10 1.9 13.5 5.6z"/></svg>
             <h3 class="font-bold mt-4">Meditation & Yoga</h3>
             <p class="section-copy text-sm mt-2">Spaces for mindfulness and wellbeing.</p>
           </div>
 
           <div class="amenity-card glass rounded-xl p-5">
-            <i class="fa-solid fa-dumbbell text-2xl text-bluebrand-300"></i>
+            <svg class="inline-icon" viewBox="0 0 640 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M96 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 160 0 64 0 160c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-64-32 0c-17.7 0-32-14.3-32-32l0-64c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-64c0-17.7 14.3-32 32-32l32 0 0-64zm448 0l0 64 32 0c17.7 0 32 14.3 32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 64c0 17.7-14.3 32-32 32l-32 0 0 64c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-160 0-64 0-160c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32zM416 224l0 64-192 0 0-64 192 0z"/></svg>
             <h3 class="font-bold mt-4">Fitness Centre</h3>
             <p class="section-copy text-sm mt-2">A dedicated place to work out.</p>
           </div>
 
           <div class="amenity-card glass rounded-xl p-5">
-            <i class="fa-solid fa-basketball text-2xl text-bluebrand-300"></i>
+            <svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M86.6 64l85.2 85.2C194.5 121.7 208 86.4 208 48c0-14.7-2-28.9-5.7-42.4C158.6 15 119 35.5 86.6 64zM64 86.6C35.5 119 15 158.6 5.6 202.3C19.1 206 33.3 208 48 208c38.4 0 73.7-13.5 101.3-36.1L64 86.6zM256 0c-7.3 0-14.6 .3-21.8 .9C238 16 240 31.8 240 48c0 47.3-17.1 90.5-45.4 124L256 233.4 425.4 64C380.2 24.2 320.9 0 256 0zM48 240c-16.2 0-32-2-47.1-5.8C.3 241.4 0 248.7 0 256c0 64.9 24.2 124.2 64 169.4L233.4 256 172 194.6C138.5 222.9 95.3 240 48 240zm463.1 37.8c.6-7.2 .9-14.5 .9-21.8c0-64.9-24.2-124.2-64-169.4L278.6 256 340 317.4c33.4-28.3 76.7-45.4 124-45.4c16.2 0 32 2 47.1 5.8zm-4.7 31.9C492.9 306 478.7 304 464 304c-38.4 0-73.7 13.5-101.3 36.1L448 425.4c28.5-32.3 49.1-71.9 58.4-115.7zM340.1 362.7C317.5 390.3 304 425.6 304 464c0 14.7 2 28.9 5.7 42.4C353.4 497 393 476.5 425.4 448l-85.2-85.2zM317.4 340L256 278.6 86.6 448c45.1 39.8 104.4 64 169.4 64c7.3 0 14.6-.3 21.8-.9C274 496 272 480.2 272 464c0-47.3 17.1-90.5 45.4-124z"/></svg>
             <h3 class="font-bold mt-4">Sports Court</h3>
             <p class="section-copy text-sm mt-2">Sports and recreational facilities.</p>
           </div>
@@ -1140,7 +1113,7 @@
         <div class="glass rounded-2xl p-6 sm:p-8 mt-8">
           <div class="flex flex-col md:flex-row gap-5 items-start md:items-center">
             <div class="text-3xl text-bluebrand-300">
-              <i class="fa-solid fa-infinity"></i>
+              <svg class="inline-icon" viewBox="0 0 640 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 241.1C0 161 65 96 145.1 96c38.5 0 75.4 15.3 102.6 42.5L320 210.7l72.2-72.2C419.5 111.3 456.4 96 494.9 96C575 96 640 161 640 241.1l0 29.7C640 351 575 416 494.9 416c-38.5 0-75.4-15.3-102.6-42.5L320 301.3l-72.2 72.2C220.5 400.7 183.6 416 145.1 416C65 416 0 351 0 270.9l0-29.7zM274.7 256l-72.2-72.2c-15.2-15.2-35.9-23.8-57.4-23.8C100.3 160 64 196.3 64 241.1l0 29.7c0 44.8 36.3 81.1 81.1 81.1c21.5 0 42.2-8.5 57.4-23.8L274.7 256zm90.5 0l72.2 72.2c15.2 15.2 35.9 23.8 57.4 23.8c44.8 0 81.1-36.3 81.1-81.1l0-29.7c0-44.8-36.3-81.1-81.1-81.1c-21.5 0-42.2 8.5-57.4 23.8L365.3 256z"/></svg>
             </div>
             <div>
               <h3 class="text-xl font-bold">35+ Lifestyle Amenities</h3>
@@ -1188,7 +1161,7 @@
         </div>
         <div class="text-center">
           <button type="button" class="brochure-btn js-open-enquiry" data-download-type="floor-plan">
-            <i class="fa-solid fa-file-pdf"></i> Download Floor Plan
+            <svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 144-208 0c-35.3 0-64 28.7-64 64l0 144-48 0c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"/></svg> Download Floor Plan
           </button>
         </div>
 
@@ -1236,22 +1209,22 @@
         <!-- SIX INTERACTIVE LOCATION CATEGORIES -->
         <div class="location-tabs" id="locationTabs">
           <button class="location-tab active-tab" data-category="airport" aria-pressed="true">
-            <i class="fa-solid fa-road mr-2"></i>Connectivity & Major Roads
+            <svg class="inline-icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M256 32l-74.8 0c-27.1 0-51.3 17.1-60.3 42.6L3.1 407.2C1.1 413 0 419.2 0 425.4C0 455.5 24.5 480 54.6 480L256 480l0-64c0-17.7 14.3-32 32-32s32 14.3 32 32l0 64 201.4 0c30.2 0 54.6-24.5 54.6-54.6c0-6.2-1.1-12.4-3.1-18.2L455.1 74.6C446 49.1 421.9 32 394.8 32L320 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64zm64 192l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32s32 14.3 32 32z"/></svg>Connectivity & Major Roads
           </button>
           <button class="location-tab" data-category="it" aria-pressed="false">
-            <i class="fa-solid fa-building mr-2"></i>IT & Employment Hubs
+            <svg class="inline-icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM80 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM272 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg>IT & Employment Hubs
           </button>
           <button class="location-tab" data-category="education" aria-pressed="false">
-            <i class="fa-solid fa-graduation-cap mr-2"></i>Schools & Education
+            <svg class="inline-icon" viewBox="0 0 640 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9l0 28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5l0-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>Schools & Education
           </button>
           <button class="location-tab" data-category="healthcare" aria-pressed="false">
-            <i class="fa-solid fa-hospital mr-2"></i>Hospitals & Healthcare
+            <svg class="inline-icon" viewBox="0 0 640 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M192 48c0-26.5 21.5-48 48-48L400 0c26.5 0 48 21.5 48 48l0 464-80 0 0-80c0-26.5-21.5-48-48-48s-48 21.5-48 48l0 80-80 0 0-464zM48 96l112 0 0 416L48 512c-26.5 0-48-21.5-48-48L0 320l80 0c8.8 0 16-7.2 16-16s-7.2-16-16-16L0 288l0-64 80 0c8.8 0 16-7.2 16-16s-7.2-16-16-16L0 192l0-48c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48l0 48-80 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l80 0 0 64-80 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l80 0 0 144c0 26.5-21.5 48-48 48l-112 0 0-416 112 0zM312 64c-8.8 0-16 7.2-16 16l0 24-24 0c-8.8 0-16 7.2-16 16l0 16c0 8.8 7.2 16 16 16l24 0 0 24c0 8.8 7.2 16 16 16l16 0c8.8 0 16-7.2 16-16l0-24 24 0c8.8 0 16-7.2 16-16l0-16c0-8.8-7.2-16-16-16l-24 0 0-24c0-8.8-7.2-16-16-16l-16 0z"/></svg>Hospitals & Healthcare
           </button>
           <button class="location-tab" data-category="shopping" aria-pressed="false">
-            <i class="fa-solid fa-bag-shopping mr-2"></i>Shopping & Entertainment
+            <svg class="inline-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>Shopping & Entertainment
           </button>
           <button class="location-tab" data-category="lifestyle" aria-pressed="false">
-            <i class="fa-solid fa-person-biking mr-2"></i>Sports, Recreation & Lifestyle
+            <svg class="inline-icon" viewBox="0 0 640 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M400 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm27.2 64l-61.8-48.8c-17.3-13.6-41.7-13.8-59.1-.3l-83.1 64.2c-30.7 23.8-28.5 70.8 4.3 91.6L288 305.1 288 416c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128c0-10.7-5.3-20.7-14.2-26.6L295 232.9l60.3-48.5L396 217c5.7 4.5 12.7 7 20 7l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-52.8 0zM56 384a72 72 0 1 1 144 0A72 72 0 1 1 56 384zm200 0A128 128 0 1 0 0 384a128 128 0 1 0 256 0zm184 0a72 72 0 1 1 144 0 72 72 0 1 1 -144 0zm200 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>Sports, Recreation & Lifestyle
           </button>
         </div>
 
@@ -1300,7 +1273,7 @@
 
               <div class="flex gap-4 items-center">
                 <span class="w-11 h-11 rounded-xl bg-bluebrand-500/15 text-bluebrand-300 flex items-center justify-center">
-                  <i class="fa-solid fa-location-dot"></i>
+                  <svg class="inline-icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
                 </span>
 
                 <div>
@@ -1313,7 +1286,7 @@
 
               <div class="flex gap-4 items-center">
                 <span class="w-11 h-11 rounded-xl bg-bluebrand-500/15 text-bluebrand-300 flex items-center justify-center">
-                  <i class="fa-solid fa-building"></i>
+                  <svg class="inline-icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM80 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM272 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg>
                 </span>
 
                 <div>
@@ -1345,11 +1318,11 @@
                   <option value="3 BHK">3 BHK</option>
                 </select>
               </div>
-              <button type="submit" class="btn-primary w-full justify-center">Book a site visit<i class="fa-solid fa-arrow-right"></i></button>
+              <button type="submit" class="btn-primary w-full justify-center">Book a site visit<svg class="inline-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></button>
               <p id="enquiry-inline-message" class="hidden rounded-lg bg-[#FCE9DC] p-3 text-sm font-semibold text-[#553B2B]" role="status"></p>
             </form>
             <a href="tel:+918088498367" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#553B2B] px-5 py-3 font-bold text-[#553B2B]">
-              <i class="fa-solid fa-phone"></i> Call Us: +91 80884 98367
+              <svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> Call Us: +91 80884 98367
             </a>
           </div>
 
@@ -1379,55 +1352,55 @@
     <div class="grid grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
 
       <figure class="gallery-card">
-        <img src="./images/gallery-01.webp"
+        <img decoding="async" width="1254" height="1254" src="./images/gallery-01.webp"
              alt="ABHEE Celestial City project view" loading="lazy">
         <figcaption>Project Overview</figcaption>
       </figure>
 
       <figure class="gallery-card">
-        <img src="./images/gallery-04.webp"
+        <img decoding="async" width="1672" height="941" src="./images/gallery-04.webp"
              alt="ABHEE Celestial City residential view" loading="lazy">
         <figcaption>Residential Living</figcaption>
       </figure>
 
       <figure class="gallery-card">
-        <img src="./images/gallery-03.webp"
+        <img decoding="async" width="1672" height="941" src="./images/gallery-03.webp"
              alt="ABHEE Celestial City architecture" loading="lazy">
         <figcaption>Modern Architecture</figcaption>
       </figure>
 
       <figure class="gallery-card">
-        <img src="./images/abhee-cc-garden.webp"
+        <img decoding="async" width="3840" height="2160" src="./images/abhee-cc-garden.webp"
              alt="ABHEE Celestial City lifestyle" loading="lazy">
         <figcaption>Lifestyle Spaces</figcaption>
       </figure>
 
       <figure class="gallery-card">
-        <img src="./images/amenities.webp"
+        <img decoding="async" width="1672" height="941" src="./images/amenities.webp"
              alt="ABHEE Celestial City amenities" loading="lazy">
         <figcaption>World-Class Amenities</figcaption>
       </figure>
 
       <figure class="gallery-card">
-        <img src="./images/Elevation-8-Abhee-Celestial-City.webp"
+        <img decoding="async" width="971" height="546" src="./images/Elevation-8-Abhee-Celestial-City.webp"
              alt="ABHEE Celestial City exterior" loading="lazy">
         <figcaption>Elegant Exteriors</figcaption>
       </figure>
 
       <figure class="gallery-card">
-        <img src="./images/pool-courtyard.webp"
+        <img decoding="async" width="3840" height="2560" src="./images/pool-courtyard.webp"
              alt="ABHEE Celestial City development" loading="lazy">
         <figcaption>Thoughtful Design</figcaption>
       </figure>
 
       <figure class="gallery-card">
-        <img src="./images/abhee-front-gate-viewt.jpg"
+        <img decoding="async" width="1280" height="720" src="./images/abhee-front-gate-viewt.webp"
              alt="ABHEE Celestial City residential spaces" loading="lazy">
         <figcaption>Premium Residences</figcaption>
       </figure>
 
       <figure class="gallery-card">
-        <img src="./images/amenities-Play-Ground2.webp"
+        <img decoding="async" width="2048" height="1152" src="./images/amenities-Play-Ground2.webp"
              alt="ABHEE Celestial City surroundings" loading="lazy">
         <figcaption>Inspired Living</figcaption>
       </figure>
@@ -1447,7 +1420,7 @@
 
         <!-- ABHEE Ventures logo -->
         <div>
-          <img
+          <img decoding="async" width="1920" height="1237"
             src="./images/abhee-ventures-logo-white-2.png"
             alt="Abhee Ventures Logo"
             class="h-20 w-auto max-w-[260px] object-contain"
@@ -1483,7 +1456,7 @@
             rel="noopener"
             class="inline-block mt-6 text-sm text-bluebrand-300">
             View project location
-            <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+            <svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg>
           </a>
 
         </div>
@@ -1531,15 +1504,15 @@
         <p id="popup-message" class="hidden text-sm rounded-lg p-3 bg-[#FCE9DC] text-[#553B2B]" role="status"></p>
       </form>
       <a id="brochure-download" class="hidden mt-4 w-full text-center rounded-full bg-[#553B2B] text-white font-bold px-5 py-3" href="./brochure/Celestial City Brochure.pdf" download>
-        <i class="fa-solid fa-download mr-2"></i> Download Brochure
+        <svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg> Download Brochure
       </a>
     </div>
   </div>
 
   <!-- FLOATING CONTACT BUTTONS -->
   <div class="floating-contact" aria-label="Contact options">
-    <a class="floating-whatsapp" href="https://wa.me/918088498367?text=Hello%2C%20I%20am%20interested%20in%20ABHEE%20Celestial%20City.%20Please%20share%20more%20details." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a class="floating-call" href="tel:+918088498367" aria-label="Call ABHEE Celestial City"><i class="fa-solid fa-phone"></i></a>
+    <a class="floating-whatsapp" href="https://wa.me/918088498367?text=Hello%2C%20I%20am%20interested%20in%20ABHEE%20Celestial%20City.%20Please%20share%20more%20details." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="inline-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+    <a class="floating-call" href="tel:+918088498367" aria-label="Call ABHEE Celestial City"><svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg></a>
   </div>
 
   <!-- FULL-SCREEN IMAGE VIEWER -->
@@ -1577,9 +1550,7 @@
 
       menuButton.setAttribute('aria-expanded', String(!isOpen));
 
-      menuIcon.className = isOpen
-        ? 'fa-solid fa-bars'
-        : 'fa-solid fa-xmark';
+      menuIcon.innerHTML = isOpen ? '<svg  viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>' : '<svg  viewBox="0 0 384 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>';
 
     });
 
@@ -1592,7 +1563,7 @@
 
         menuButton.setAttribute('aria-expanded', 'false');
 
-        menuIcon.className = 'fa-solid fa-bars';
+        menuIcon.innerHTML = '<svg  viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>';
 
       });
 
@@ -1637,7 +1608,7 @@
         const isFloorPlan = el.dataset.downloadType === 'floor-plan';
         if (downloadLink) {
           downloadLink.href = './brochure/Abhee Celestial City Floor Plan.pdf';
-          downloadLink.innerHTML = '<i class="fa-solid fa-download mr-2"></i> Download Floor Plan';
+          downloadLink.innerHTML = '<svg class="inline-icon" viewBox="0 0 512 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg> Download Floor Plan';
         }
         openEnquiryPopup();
       });
