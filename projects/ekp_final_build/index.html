@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#344D39">
 
   <!-- SEO Meta Tags -->
-  <title>Embassy Knowledge Park</title>
+  <title>Embassy Knowledge Park, North Bengaluru | Premium Apartments</title>
 
   <meta name="description" content="Explore Embassy Knowledge Park in North Bengaluru. Discover premium 2, 2.5, 3 and 3.5 BHK residences by Embassy Group, with thoughtfully planned amenities and convenient connectivity.">
 
@@ -26,41 +26,15 @@
   <meta name="twitter:title" content="Embassy Knowledge Park | North Bengaluru">
   <meta name="twitter:description" content="Explore premium residences at Embassy Knowledge Park by Embassy Group in North Bengaluru.">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: {
-              800: '#10264d',
-              900: '#091b3a',
-              950: '#06132b'
-            },
-            bluebrand: {
-              300: '#75d9ff',
-              400: '#36c5f4',
-              500: '#079bd3',
-              600: '#087bb8',
-              700: '#07558f'
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif']
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- Fonts and Icons -->
+  <link rel="preload" as="image" href="./images/ekp-tower-view-1440.webp" imagesrcset="./images/ekp-tower-view-768.webp 768w, ./images/ekp-tower-view-1440.webp 1440w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="./css/tailwind.min.css">
+<!-- Fonts and Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="style" href="./vendor/fontawesome/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css"></noscript>
 
   <style>
     * {
@@ -114,6 +88,7 @@
     }
 
     .hero-video {
+      aspect-ratio: 1683 / 935;
       position: absolute;
       inset: 0;
       width: 100%;
@@ -411,6 +386,7 @@
     }
 
     @media(max-width:767px) {
+      .amenities-track { animation-duration: 90s; }
       .section-pad {
         padding: 72px 0;
       }
@@ -461,13 +437,16 @@
 
     @media(prefers-reduced-motion:reduce) {
       .amenities-track {
-        animation: none;
+        animation: none !important;
       }
 
       *,
       *::before,
       *::after {
         scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
 
@@ -639,6 +618,24 @@
         linear-gradient(90deg,rgba(24,54,34,.72) 0%,rgba(24,54,34,.48) 55%,rgba(24,54,34,.18) 100%),
         linear-gradient(0deg,rgba(24,54,34,.58),rgba(24,54,34,.08) 72%) !important;
     }
+    /* Keep hero copy anchored to the left on desktop and mobile. */
+    #home > .hero-content {
+      display: block;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left !important;
+    }
+    #home > .hero-content > .hero-copy {
+      width: 100%;
+      max-width: 48rem;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      text-align: left !important;
+    }
+    #home .hero-copy h1,
+    #home .hero-copy p { text-align: left !important; }
+
     #home h1 {
       color: #FFFFFF !important;
       text-shadow: 0 3px 22px rgba(0,0,0,.42);
@@ -805,7 +802,7 @@
             src="./images/embassy-logo-white.png"
             alt="Embassy Group"
             class="h-11 md:h-12 w-auto max-w-[190px] object-contain"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block'" decoding="async" width="1326" height="1187">
 
           <span class="hidden text-white font-extrabold tracking-wide">
             EMBASSY
@@ -861,18 +858,19 @@
 
       <img
   class="hero-video"
-  src="./images/ekp-tower-view.webp"
-  alt="ABHEE Celestial City residential project"
-  fetchpriority="high"
-  loading="eager"
-  decoding="async">
+  src="./images/ekp-tower-view-1440.webp"
+  srcset="./images/ekp-tower-view-768.webp 768w, ./images/ekp-tower-view-1440.webp 1440w"
+  sizes="100vw"
+  alt="Embassy Knowledge Park residential tower view"
+  
+  loading="eager" fetchpriority="high" decoding="async" width="1440" height="800">
 
       <div class="absolute inset-0 hero-overlay"></div>
       <div class="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#06132b]/70 to-transparent"></div>
 
-      <div class="relative z-10 max-w-7xl w-full mx-auto px-5 sm:px-8 lg:px-10 pb-24 md:pb-0 pt-36">
+      <div class="hero-content relative z-10 max-w-7xl w-full mx-auto px-5 sm:px-8 lg:px-10 pb-24 md:pb-0 pt-36">
 
-        <div class="max-w-3xl">
+        <div class="hero-copy max-w-3xl">
 
           <div class="inline-flex items-center gap-2 rounded-full border border-bluebrand-300/40 bg-bluebrand-500/15 px-4 py-2 text-[10px] sm:text-xs tracking-[.18em] uppercase font-bold text-bluebrand-300 mb-6">
             <span class="w-2 h-2 rounded-full bg-bluebrand-300 animate-pulse"></span>
@@ -946,7 +944,7 @@
                 src="./images/ekp-ariel-view-v2.webp"
                 alt="Embassy Knowledge Park residential apartment view"
                 class="w-full h-[360px] sm:h-[520px] object-cover"
-                loading="lazy">
+                loading="lazy" decoding="async" width="1600" height="898">
             </div>
 
             <div class="absolute -bottom-6 -right-5 w-2/3 h-2/3 border border-bluebrand-400/40 rounded-3xl"></div>
@@ -1022,7 +1020,7 @@
               src="./images/ekp-tower-view.webp"
               alt="Embassy Knowledge Park development"
               class="w-full h-[340px] sm:h-[440px] object-cover"
-              loading="lazy">
+              loading="lazy" decoding="async" width="1600" height="889">
           </div>
 
         </div>
@@ -1130,7 +1128,7 @@
                 src="./images/full-project-master-plan.webp"
                 alt="Embassy Knowledge Park full township master plan"
                 class="w-full h-auto object-contain master-plan-image js-masterplan-enquiry"
-                loading="lazy" tabindex="0" role="button" aria-label="Enquire to view master plan">
+                loading="lazy" tabindex="0" role="button" aria-label="Enquire to view master plan" decoding="async" width="1600" height="861">
             </div>
           </div>
 
@@ -1148,7 +1146,7 @@
                 src="./images/apartment-master-plan.webp"
                 alt="Embassy Knowledge Park apartment master plan"
                 class="w-full h-auto object-contain master-plan-image js-masterplan-enquiry"
-                loading="lazy" tabindex="0" role="button" aria-label="Enquire to view master plan">
+                loading="lazy" tabindex="0" role="button" aria-label="Enquire to view master plan" decoding="async" width="1600" height="818">
             </div>
           </div>
 
@@ -1189,83 +1187,83 @@
 
             <!-- First image set -->
             <div class="amenity-image-card">
-              <img src="./images/ekp-clubhouse.webp" alt="Apartment clubhouse" loading="lazy">
+              <img src="./images/ekp-clubhouse.webp" alt="Apartment clubhouse" loading="lazy" decoding="async" width="1600" height="893">
               <div class="amenity-image-label">Apartment Clubhouse</div>
             </div>
 
             <div class="amenity-image-card">
-              <img src="./images/EKP-Yoga.webp" alt="Meditation and yoga room" loading="lazy">
+              <img src="./images/EKP-Yoga.webp" alt="Meditation and yoga room" loading="lazy" decoding="async" width="1600" height="877">
               <div class="amenity-image-label">Meditation & Yoga</div>
             </div>
 
             <div class="amenity-image-card">
-              <img src="./images/ekp-fitness-center.webp" alt="Fitness centre" loading="lazy">
+              <img src="./images/ekp-fitness-center.webp" alt="Fitness centre" loading="lazy" decoding="async" width="1600" height="891">
               <div class="amenity-image-label">Fitness Centre</div>
             </div>
 
             <div class="amenity-image-card">
-              <img src="./images/ekp-swimming-pool.webp" alt="Swimming pool" loading="lazy">
+              <img src="./images/ekp-swimming-pool.webp" alt="Swimming pool" loading="lazy" decoding="async" width="1600" height="895">
               <div class="amenity-image-label">Swimming Pool</div>
             </div>
 
             <div class="amenity-image-card">
-              <img src="./images/children-park.webp" alt="Children's park" loading="lazy">
+              <img src="./images/children-park.webp" alt="Children's park" loading="lazy" decoding="async" width="1600" height="897">
               <div class="amenity-image-label">Children's Park</div>
             </div>
 
             <div class="amenity-image-card">
-              <img src="./images/children-play-area.webp" alt="Children's play area" loading="lazy">
+              <img src="./images/children-play-area.webp" alt="Children's play area" loading="lazy" decoding="async" width="1600" height="878">
               <div class="amenity-image-label">Children's Play Area</div>
             </div>
 
             <div class="amenity-image-card">
-              <img src="./images/rooftop-view.webp" alt="Rooftop view" loading="lazy">
+              <img src="./images/rooftop-view.webp" alt="Rooftop view" loading="lazy" decoding="async" width="1600" height="895">
               <div class="amenity-image-label">Rooftop Lifestyle</div>
             </div>
 
             <div class="amenity-image-card">
-              <img src="./images/sitout-view.webp" alt="Residential sit-out space" loading="lazy">
+              <img src="./images/sitout-view.webp" alt="Residential sit-out space" loading="lazy" decoding="async" width="1600" height="900">
               <div class="amenity-image-label">Relaxation & Sit-out</div>
             </div>
 
             <!-- Duplicate image set for seamless animation -->
             <div class="amenity-image-card" aria-hidden="true">
-              <img src="./images/ekp-clubhouse.webp" alt="" loading="lazy">
+              <img src="./images/ekp-clubhouse.webp" alt="" loading="lazy" decoding="async" width="1600" height="893">
               <div class="amenity-image-label">Apartment Clubhouse</div>
             </div>
 
             <div class="amenity-image-card" aria-hidden="true">
-              <img src="./images/EKP-Yoga.webp" alt="" loading="lazy">
+              <img src="./images/EKP-Yoga.webp" alt="" loading="lazy" decoding="async" width="1600" height="877">
               <div class="amenity-image-label">Meditation & Yoga</div>
             </div>
 
             <div class="amenity-image-card" aria-hidden="true">
-              <img src="./images/ekp-fitness-center.webp" alt="" loading="lazy">
+              <img src="./images/ekp-fitness-center.webp" alt="" loading="lazy" decoding="async" width="1600" height="891">
               <div class="amenity-image-label">Fitness Centre</div>
             </div>
 
             <div class="amenity-image-card" aria-hidden="true">
-              <img src="./images/ekp-swimming-pool.webp" alt="" loading="lazy">
+              <img src="./images/ekp-swimming-pool.webp" alt="" loading="lazy" decoding="async" width="1600" height="895">
               <div class="amenity-image-label">Swimming Pool</div>
             </div>
 
             <div class="amenity-image-card" aria-hidden="true">
-              <img src="./images/children-park.webp" alt="" loading="lazy">
+              <img src="./images/children-park.webp" alt="" loading="lazy" decoding="async" width="1600" height="897">
               <div class="amenity-image-label">Children's Park</div>
             </div>
 
             <div class="amenity-image-card" aria-hidden="true">
-              <img src="./images/children-play-area.webp" alt="" loading="lazy">
+              <img src="./images/children-play-area.webp" alt="" loading="lazy" decoding="async" width="1600" height="878">
               <div class="amenity-image-label">Children's Play Area</div>
             </div>
 
             <div class="amenity-image-card" aria-hidden="true">
-              <img src="./images/rooftop-view.webp" alt="" loading="lazy">
+              <img src="./images/rooftop-view.webp" alt="" loading="lazy" decoding="async" width="1600" height="895">
               <div class="amenity-image-label">Rooftop Lifestyle</div>
             </div>
 
             <div class="amenity-image-card" aria-hidden="true">
-              <img src="./images/sitout-view.webp" alt="" loading="lazy">
+              <img src="./images/sitout-view.webp" alt="" loading="lazy" decoding="async" width="1600" height="900">
               <div class="amenity-image-label">Relaxation & Sit-out</div>
             </div>
 
@@ -1446,7 +1444,7 @@
             <span class="text-xs text-slate-400">Approximate distances</span>
           </div>
 
-          <div id="locationList" class="grid md:grid-cols-2 gap-x-12"></div>
+          <div id="locationList" class="grid md:grid-cols-2 gap-x-12"><div class="location-item"><span class="location-name">Kempegowda International Airport</span><span class="location-distance">14–15 km</span></div><div class="location-item"><span class="location-name">Yelahanka</span><span class="location-distance">10–12 km</span></div><div class="location-item"><span class="location-name">Devanahalli Town</span><span class="location-distance">11–15 km</span></div><div class="location-item"><span class="location-name">Hebbal Flyover</span><span class="location-distance">16–20 km</span></div><div class="location-item"><span class="location-name">Manyata Tech Park</span><span class="location-distance">22–25 km</span></div><div class="location-item"><span class="location-name">Bengaluru City Centre</span><span class="location-distance">28–30 km</span></div><div class="location-item"><span class="location-name">IVC Road</span><span class="location-distance">2–5 km</span></div><div class="location-item"><span class="location-name">NH-44 (Bellary Road)</span><span class="location-distance">15–20 km</span></div><div class="location-item"><span class="location-name">Outer Ring Road (Hebbal Junction)</span><span class="location-distance">18–20 km</span></div><div class="location-item"><span class="location-name">Yelahanka–Devanahalli Road</span><span class="location-distance">5–10 km</span></div><div class="location-item"><span class="location-name">Proposed Doddajala Metro Station</span><span class="location-distance">5–8 km</span></div><div class="location-item"><span class="location-name">Yelahanka Railway Junction</span><span class="location-distance">12–15 km</span></div></div>
         </div>
 
         <p class="text-xs text-slate-500 mt-6 text-center">
@@ -1548,15 +1546,15 @@
           <p class="section-copy mt-4">Explore selected spaces and lifestyle visuals from Embassy Knowledge Park.</p>
         </div>
         <div class="grid grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
-          <figure class="gallery-card"><img src="./images/ekp-ariel-view-v2.webp" alt="Embassy Knowledge Park aerial view" loading="lazy"><figcaption>Project Overview</figcaption></figure>
-          <figure class="gallery-card"><img src="./images/ekp-tower-view.webp" alt="Residential tower view" loading="lazy"><figcaption>Residential Towers</figcaption></figure>
-          <figure class="gallery-card"><img src="./images/ekp-clubhouse.webp" alt="Clubhouse" loading="lazy"><figcaption>Clubhouse</figcaption></figure>
-          <figure class="gallery-card"><img src="./images/ekp-balcony-view.webp" alt="Balcony View" loading="lazy"><figcaption>Balcony View</figcaption></figure>
-          <figure class="gallery-card"><img src="./images/ekp-fitness-center.webp" alt="Fitness centre" loading="lazy"><figcaption>Fitness Centre</figcaption></figure>
-          <figure class="gallery-card"><img src="./images/ekp-apartment-view.webp" alt="Tower & Landscape" loading="lazy"><figcaption>Tower & Landscape</figcaption></figure>
-          <figure class="gallery-card"><img src="./images/children-play-area.webp" alt="Sports Court" loading="lazy"><figcaption>Sports Court</figcaption></figure>
-          <figure class="gallery-card"><img src="./images/rooftop-view.webp" alt="Rooftop lifestyle" loading="lazy"><figcaption>Rooftop Lifestyle</figcaption></figure>
-          <figure class="gallery-card"><img src="./images/sitout-view.webp" alt="Relaxation sit-out" loading="lazy"><figcaption>Relaxation Spaces</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-ariel-view-v2.webp" alt="Embassy Knowledge Park aerial view" loading="lazy" decoding="async" width="1600" height="898"><figcaption>Project Overview</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-tower-view.webp" alt="Residential tower view" loading="lazy" decoding="async" width="1600" height="889"><figcaption>Residential Towers</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-clubhouse.webp" alt="Clubhouse" loading="lazy" decoding="async" width="1600" height="893"><figcaption>Clubhouse</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-balcony-view.webp" alt="Balcony View" loading="lazy" decoding="async" width="1448" height="1086"><figcaption>Balcony View</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-fitness-center.webp" alt="Fitness centre" loading="lazy" decoding="async" width="1600" height="891"><figcaption>Fitness Centre</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/ekp-apartment-view.webp" alt="Tower & Landscape" loading="lazy" decoding="async" width="1600" height="900"><figcaption>Tower & Landscape</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/children-play-area.webp" alt="Sports Court" loading="lazy" decoding="async" width="1600" height="878"><figcaption>Sports Court</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/rooftop-view.webp" alt="Rooftop lifestyle" loading="lazy" decoding="async" width="1600" height="895"><figcaption>Rooftop Lifestyle</figcaption></figure>
+          <figure class="gallery-card"><img src="./images/sitout-view.webp" alt="Relaxation sit-out" loading="lazy" decoding="async" width="1600" height="900"><figcaption>Relaxation Spaces</figcaption></figure>
         </div>
       </div>
     </section>
@@ -1576,7 +1574,7 @@
             src="./images/footer-embassy-logo-white.png"
             alt="Embassy Group Logo"
             class="h-20 w-auto max-w-[260px] object-contain"
-            loading="lazy">
+            loading="lazy" decoding="async" width="3840" height="2479">
 
           <div class="mt-4 text-xs text-slate-300">
             <span class="block uppercase tracking-wider text-slate-400">RERA Registration Number</span>
@@ -1657,7 +1655,7 @@
         <button type="submit" class="btn-primary w-full">Submit</button>
         <p id="popup-message" class="hidden text-sm rounded-lg p-3 bg-[#D6E5CE] text-[#344D39]" role="status"></p>
       </form>
-      <a id="brochure-download" class="hidden mt-4 w-full text-center rounded-full bg-[#344D39] text-white font-bold px-5 py-3" href="./brochure/Embassy Knowledge Park - Brochure.pdf" download>
+      <a id="brochure-download" class="hidden mt-4 w-full text-center rounded-full bg-[#344D39] text-white font-bold px-5 py-3" href="./brochure/Embassy South Reserve -Brochure.pdf" download>
         <i class="fa-solid fa-download mr-2"></i> Download Brochure
       </a>
     </div>
@@ -1684,7 +1682,7 @@
       &times;
     </button>
 
-    <img id="lightbox-image" src="" alt="Full-screen preview">
+    <img id="lightbox-image" src="" alt="Full-screen preview" decoding="async">
 
   </div>
 
@@ -1765,7 +1763,7 @@
         if (downloadLink) {
           downloadLink.href = isFloorPlan
             ? './brochure/EKP-Floor-Plan.pdf'
-            : './brochure/Embassy Knowledge Park - Brochure.pdf';
+            : './brochure/Embassy South Reserve -Brochure.pdf';
           downloadLink.innerHTML = isFloorPlan
             ? '<i class="fa-solid fa-download mr-2"></i> Download Floor Plan'
             : '<i class="fa-solid fa-download mr-2"></i> Download Brochure';
